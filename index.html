@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Sanjay Photo Studio & Films</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #080808;
+      color: white;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .tag {
+      letter-spacing: 4px;
+      font-size: 14px;
+      color: #aaa;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 9vw, 90px);
+      line-height: 1;
+      margin-bottom: 25px;
+    }
+
+    h1 span {
+      color: #d4af37;
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #ccc;
+      line-height: 1.7;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 30px;
+      border: 1px solid #d4af37;
+      border-radius: 30px;
+      color: white;
+      text-decoration: none;
+    }
+
+    section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    .gold {
+      color: #d4af37;
+    }
+
+    .about {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .about p {
+      color: #aaa;
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    .services {
+      max-width: 1000px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #121212;
+      padding: 35px 20px;
+      border-radius: 15px;
+      border: 1px solid #222;
+    }
+
+    .card p {
+      color: #999;
+      margin-top: 10px;
+    }
+
+    footer {
+      padding: 30px;
+      text-align: center;
+      background: #050505;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="hero">
+
+    <div class="hero-content">
+
+      <div class="tag">
+        SANJAY PHOTO STUDIO & FILMS
+      </div>
+
+      <h1>
+        Capturing <span>Moments.</span><br>
+        Creating Memories.
+      </h1>
+
+      <p>
+        Professional Photography & Cinematic Films
+        for your most beautiful moments.
+      </p>
+
+      <a href="#services" class="btn">
+        Explore Our Work
+      </a>
+
+    </div>
+
+  </section>
+
+  <section class="about">
+
+    <h2>About <span class="gold">Us</span></h2>
+
+    <p>
+      Sanjay Photo Studio & Films is dedicated to capturing
+      beautiful moments and transforming them into timeless memories.
+      We create photographs and cinematic films with creativity,
+      passion and attention to detail.
+    </p>
+
+  </section>
+
+  <section id="services">
+
+    <h2>Our <span class="gold">Services</span></h2>
+
+    <div class="services">
+
+      <div class="card">
+        <h3>📸 Photography</h3>
+        <p>Creative photography for special moments.</p>
+      </div>
+
+      <div class="card">
+        <h3>💍 Wedding</h3>
+        <p>Beautiful wedding memories captured forever.</p>
+      </div>
+
+      <div class="card">
+        <h3>🎬 Films</h3>
+        <p>Cinematic films that tell your story.</p>
+      </div>
+
+      <div class="card">
+        <h3>👤 Portraits</h3>
+        <p>Professional and creative portrait photography.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    © 2026 Sanjay Photo Studio & Films
+  </footer>
+
+</body>
+</html>
