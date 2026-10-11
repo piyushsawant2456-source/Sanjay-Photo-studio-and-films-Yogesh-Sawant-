@@ -339,6 +339,14 @@
 </head>
 
 <body>
+  
+  <!-- Owner Login Button -->
+<div id="owner-login" style="text-align:center; padding:20px;">
+  <button onclick="googleLogin()" style="background:#d4af37; color:#080808; padding:12px 24px; border:0; border-radius:8px; font-weight:bold; cursor:pointer;">
+    🔐 Owner Login with Google
+  </button>
+</div>
+
 <nav class="navbar">
   <div class="logo">SANJAY <span>PHOTO STUDIO</span></div>
 
@@ -568,4 +576,38 @@
   });
                                                </script>
 </body>
+  <!-- Firebase Google Login -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+import {
+  getAuth,
+  GoogleAuthProvider,
+  signInWithPopup
+} from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
+
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyAxzXdINs2QC8Evft_CC8uXpJwnlBGynTo",
+  authDomain: "sanjay-photo-studio.firebaseapp.com",
+  projectId: "sanjay-photo-studio",
+  storageBucket: "sanjay-photo-studio.firebasestorage.app",
+  messagingSenderId: "225740647964",
+  appId: "1:225740647964:web:05c2b77fdaec7af930b9d9",
+  measurementId: "G-TJDSVN488Y"
+};
+  const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
+
+async function googleLogin() {
+  try {
+    const result = await signInWithPopup(auth, provider);
+    alert("Google Login successful!");
+    console.log("Signed in:", result.user.email);
+  } catch (error) {
+    alert("Login failed: " + error.message);
+  }
+}
+  window.googleLogin = googleLogin;
+</script>
 </html>
