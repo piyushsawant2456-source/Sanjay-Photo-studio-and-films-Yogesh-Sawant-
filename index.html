@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Sanjay Photo Studio & Films</title>
+  <meta name="theme-color" content="#080808">
+  <meta name="description" content="Sanjay Photo Studio & Films — professional photography and cinematic films for your most beautiful moments.">
+  <title>Sanjay Photo Studio &amp; Films</title>
 
   <style>
     * {
@@ -13,30 +14,29 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background: #080808;
       color: white;
     }
 
-    ..hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 30px;
-
-  background:
-    linear-gradient(
-      rgba(0,0,0,0.65),
-      rgba(0,0,0,0.75)
-    ),
-    url("IMG_20260806_205022.png");
-
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 110px 30px 30px;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.75)),
+        url("IMG_20260806_205022.png");
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
     }
 
     .hero-content {
@@ -56,7 +56,9 @@
       margin-bottom: 25px;
     }
 
-    h1 span {
+    h1 span,
+    .logo span,
+    .gold {
       color: #d4af37;
     }
 
@@ -74,20 +76,23 @@
       border-radius: 30px;
       color: white;
       text-decoration: none;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #d4af37;
+      color: #080808;
     }
 
     section {
       padding: 80px 20px;
       text-align: center;
+      scroll-margin-top: 90px;
     }
 
     h2 {
       font-size: 38px;
       margin-bottom: 20px;
-    }
-
-    .gold {
-      color: #d4af37;
     }
 
     .about {
@@ -119,6 +124,174 @@
     .card p {
       color: #999;
       margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    .gallery-grid {
+      max-width: 1100px;
+      margin: 40px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 18px;
+      background: #111;
+      border: 1px solid #252525;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s ease, filter 0.6s ease;
+      cursor: pointer;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+      filter: brightness(1.12);
+    }
+
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      min-height: 68px;
+      padding: 18px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      background: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(10px);
+      z-index: 1000;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    }
+
+    .logo {
+      font-weight: bold;
+      letter-spacing: 2px;
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: #d4af37;
+    }
+
+    .films-intro {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #aaa;
+      line-height: 1.7;
+    }
+
+    .films-grid {
+      max-width: 1100px;
+      margin: 45px auto 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .film-card {
+      background: #121212;
+      border: 1px solid #252525;
+      border-radius: 20px;
+      padding: 40px 25px;
+      text-align: center;
+      transition: transform 0.4s ease, border-color 0.4s ease;
+    }
+
+    .film-card:hover {
+      transform: translateY(-6px);
+      border-color: #d4af37;
+    }
+
+    .film-icon {
+      font-size: 50px;
+      margin-bottom: 20px;
+    }
+
+    .film-card h3 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .film-card p {
+      color: #999;
+      line-height: 1.7;
+    }
+
+    .film-btn {
+      margin-top: 25px;
+      padding: 12px 24px;
+      border: 1px solid #d4af37;
+      border-radius: 25px;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .film-btn:hover {
+      background: #d4af37;
+      color: black;
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 2000;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.95);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .lightbox img {
+      max-width: 95%;
+      max-height: 90vh;
+      object-fit: contain;
+      border-radius: 10px;
+    }
+
+    .close-lightbox {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 45px;
+      color: white;
+      cursor: pointer;
+      background: transparent;
+      border: 0;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
     }
 
     footer {
@@ -127,487 +300,320 @@
       background: #050505;
       color: #777;
     }
-    .gallery-grid {
-  max-width: 1100px;
-  margin: 40px auto 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
 
-.gallery-item {
-  overflow: hidden;
-  border-radius: 18px;
-  background: #111;
-}
+    /* Floating login control stays visible above page content. */
+    #owner-login {
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      z-index: 3000;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+      max-width: calc(100vw - 32px);
+    }
 
-.gallery-item img {
-  width: 100%;
-  height: 280px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.5s ease;
-}
+    #owner-login-button {
+      background: #d4af37;
+      color: #080808;
+      padding: 12px 18px;
+      border: 1px solid #f0d878;
+      border-radius: 30px;
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+    }
 
-.gallery-item img:hover {
-  transform: scale(1.05);
-}
-    .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 18px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(10px);
-  z-index: 1000;
-}
+    #owner-login-button:hover {
+      background: #f0d878;
+    }
 
-.logo {
-  font-weight: bold;
-  letter-spacing: 2px;
-}
+    #owner-login-button:disabled {
+      opacity: 0.7;
+      cursor: wait;
+    }
 
-.logo span {
-  color: #d4af37;
-}
+    #owner-status {
+      display: none;
+      max-width: min(360px, calc(100vw - 32px));
+      padding: 10px 12px;
+      background: #151515;
+      color: #eee;
+      border: 1px solid #444;
+      border-radius: 10px;
+      font-size: 13px;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+    }
 
-.nav-links {
-  display: flex;
-  gap: 22px;
-}
+    #owner-status.visible {
+      display: block;
+    }
 
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
-}
+    @media (max-width: 760px) {
+      .navbar {
+        padding: 14px 12px;
+        flex-direction: column;
+        gap: 12px;
+      }
 
-.nav-links a:hover {
-  color: #d4af37;
-}
+      .nav-links {
+        gap: 12px;
+      }
 
-@media (max-width: 700px) {
-  .navbar {
-    padding: 15px;
-  }
+      .nav-links a {
+        font-size: 12px;
+      }
 
-  .nav-links {
-    gap: 10px;
-  }
+      .hero {
+        padding-top: 145px;
+        background-attachment: scroll;
+      }
 
-  .nav-links a {
-    font-size: 11px;
-  }
-}
-    .gallery-item {
-  position: relative;
-  overflow: hidden;
-  border-radius: 18px;
-  background: #111;
-  border: 1px solid #252525;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-}
+      .tag {
+        font-size: 11px;
+        letter-spacing: 2px;
+      }
 
-.gallery-item img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
-  display: block;
-  transition: transform 0.6s ease, filter 0.6s ease;
-}
+      h2 {
+        font-size: 32px;
+      }
 
-.gallery-item:hover img {
-  transform: scale(1.08);
-  filter: brightness(1.12);
-}
-    .lightbox {
-  display: none;
-  position: fixed;
-  z-index: 2000;
-  inset: 0;
-  background: rgba(0,0,0,0.95);
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
+      .gallery-grid {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
 
-.lightbox img {
-  max-width: 95%;
-  max-height: 90vh;
-  object-fit: contain;
-  border-radius: 10px;
-}
+      #owner-login {
+        right: 10px;
+        bottom: 10px;
+      }
 
-.close-lightbox {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 45px;
-  color: white;
-  cursor: pointer;
-}
-    .film-box {
-  max-width: 900px;
-  margin: 40px auto 0;
-}
-
-.film-placeholder {
-  min-height: 300px;
-  background: #121212;
-  border: 1px solid #252525;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  color: #d4af37;
-}
-
-.film-placeholder h3 {
-  color: white;
-  font-size: 24px;
-}
-
-.film-placeholder p {
-  color: #888;
-}
-    .films-intro {
-  max-width: 700px;
-  margin: 0 auto;
-  color: #aaa;
-  line-height: 1.7;
-}
-
-.films-grid {
-  max-width: 1100px;
-  margin: 45px auto 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-}
-
-.film-card {
-  background: #121212;
-  border: 1px solid #252525;
-  border-radius: 20px;
-  padding: 40px 25px;
-  text-align: center;
-  transition: transform 0.4s ease, border-color 0.4s ease;
-}
-
-.film-card:hover {
-  transform: translateY(-10px);
-  border-color: #d4af37;
-}
-
-.film-icon {
-  font-size: 50px;
-  margin-bottom: 20px;
-}
-
-.film-card h3 {
-  font-size: 24px;
-  margin-bottom: 15px;
-}
-
-.film-card p {
-  color: #999;
-  line-height: 1.7;
-}
-
-.film-btn {
-  margin-top: 25px;
-  padding: 12px 24px;
-  border: 1px solid #d4af37;
-  border-radius: 25px;
-  background: transparent;
-  color: white;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-.film-btn:hover {
-  background: #d4af37;
-  color: black;
-}
+      #owner-login-button {
+        padding: 11px 14px;
+        font-size: 12px;
+      }
+    }
   </style>
 </head>
 
 <body>
-  
-  <!-- Owner Login Button -->
-<div id="owner-login" style="text-align:center; padding:20px;">
-  <button onclick="googleLogin()" style="background:#d4af37; color:#080808; padding:12px 24px; border:0; border-radius:8px; font-weight:bold; cursor:pointer;">
-    🔐 Owner Login with Google
-  </button>
-</div>
-
-<nav class="navbar">
-  <div class="logo">SANJAY <span>PHOTO STUDIO</span></div>
-
-  <div class="nav-links">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#services">Services</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
-  <section class="hero" id="home">
-
-    <div class="hero-content">
-
-      <div class="tag">
-        SANJAY PHOTO STUDIO & FILMS
-      </div>
-
-      <h1>
-        Capturing <span>Moments.</span><br>
-        Creating Memories.
-      </h1>
-
-      <p>
-        Professional Photography & Cinematic Films
-        for your most beautiful moments.
-      </p>
-
-      <a href="#services" class="btn">
-        Explore Our Work
-      </a>
-
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="logo">SANJAY <span>PHOTO STUDIO</span></div>
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
     </div>
+  </nav>
 
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <div class="tag">SANJAY PHOTO STUDIO &amp; FILMS</div>
+      <h1>Capturing <span>Moments.</span><br>Creating Memories.</h1>
+      <p>Professional Photography &amp; Cinematic Films for your most beautiful moments.</p>
+      <a href="#services" class="btn">Explore Our Work</a>
+    </div>
   </section>
 
   <section class="about" id="about">
-
     <h2>About <span class="gold">Us</span></h2>
-
     <p>
-      Sanjay Photo Studio & Films is dedicated to capturing
+      Sanjay Photo Studio &amp; Films is dedicated to capturing
       beautiful moments and transforming them into timeless memories.
       We create photographs and cinematic films with creativity,
       passion and attention to detail.
     </p>
-
   </section>
 
   <section id="services">
-
     <h2>Our <span class="gold">Services</span></h2>
-
     <div class="services">
-
       <div class="card">
         <h3>📸 Photography</h3>
         <p>Creative photography for special moments.</p>
       </div>
-
       <div class="card">
         <h3>💍 Wedding</h3>
         <p>Beautiful wedding memories captured forever.</p>
       </div>
-
       <div class="card">
         <h3>🎬 Films</h3>
         <p>Cinematic films that tell your story.</p>
       </div>
-
       <div class="card">
         <h3>👤 Portraits</h3>
         <p>Professional and creative portrait photography.</p>
       </div>
-
     </div>
-
   </section>
-<section id="gallery">
 
-  <h2>Our <span class="gold">Gallery</span></h2>
-
-  <div class="gallery-grid">
-
-    <div class="gallery-item">
-      <img src="IMG_20260806_205022.png"
-           alt="Sanjay Photo Studio Photography">
+  <section id="gallery">
+    <h2>Our <span class="gold">Gallery</span></h2>
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="IMG_20260806_205022.png" alt="Sanjay Photo Studio Photography" loading="lazy"></div>
+      <div class="gallery-item"><img src="IMG_20260819_224235.png" alt="Sanjay Photo Studio Photography" loading="lazy"></div>
+      <div class="gallery-item"><img src="IMG_20260819_224555.jpg" alt="Sanjay Photo Studio Photography" loading="lazy"></div>
+      <div class="gallery-item"><img src="IMG_20260819_224612.jpg" alt="Sanjay Photo Studio Photography" loading="lazy"></div>
+      <div class="gallery-item"><img src="IMG_20260819_224635.jpg" alt="Sanjay Photo Studio Photography" loading="lazy"></div>
     </div>
+  </section>
 
-    <div class="gallery-item">
-      <img src="IMG_20260819_224235.png"
-           alt="Sanjay Photo Studio Photography">
-    </div>
-
-    <div class="gallery-item">
-      <img src="IMG_20260819_224555.jpg"
-           alt="Sanjay Photo Studio Photography">
-    </div>
-
-    <div class="gallery-item">
-      <img src="IMG_20260819_224612.jpg"
-           alt="Sanjay Photo Studio Photography">
-    </div>
-
-    <div class="gallery-item">
-      <img src="IMG_20260819_224635.jpg"
-           alt="Sanjay Photo Studio Photography">
-    </div>
-
-  </div>
-
-</section>
   <section id="films">
-
-  <h2>Our <span class="gold">Films</span></h2>
-
-  <p class="films-intro">
-    Cinematic stories created to preserve your most beautiful memories.
-  </p>
-
-  <div class="films-grid">
-
-    <div class="film-card">
-      <div class="film-icon">🎬</div>
-
-      <h3>Cinematic Films</h3>
-
-      <p>
-        Beautiful cinematic films created with creativity,
-        emotion and attention to detail.
-      </p>
-
-      <button class="film-btn" type="button">
-        ▶ Play Film
-      </button>
+    <h2>Our <span class="gold">Films</span></h2>
+    <p class="films-intro">Cinematic stories created to preserve your most beautiful memories.</p>
+    <div class="films-grid">
+      <div class="film-card">
+        <div class="film-icon">🎬</div>
+        <h3>Cinematic Films</h3>
+        <p>Beautiful cinematic films created with creativity, emotion and attention to detail.</p>
+        <button class="film-btn" type="button" data-film="Cinematic Films">▶ Play Film</button>
+      </div>
+      <div class="film-card">
+        <div class="film-icon">💍</div>
+        <h3>Wedding Films</h3>
+        <p>Relive your special wedding moments through professionally crafted films.</p>
+        <button class="film-btn" type="button" data-film="Wedding Films">▶ Play Film</button>
+      </div>
+      <div class="film-card">
+        <div class="film-icon">❤️</div>
+        <h3>Pre-Wedding Films</h3>
+        <p>Turn your pre-wedding memories into a beautiful cinematic story.</p>
+        <button class="film-btn" type="button" data-film="Pre-Wedding Films">▶ Play Film</button>
+      </div>
     </div>
+  </section>
 
-    <div class="film-card">
-      <div class="film-icon">💍</div>
-
-      <h3>Wedding Films</h3>
-
-      <p>
-        Relive your special wedding moments through
-        professionally crafted films.
-      </p>
-
-      <button class="film-btn" type="button">
-        ▶ Play Film
-      </button>
+  <section id="contact">
+    <h2>Let's Create <span class="gold">Memories</span></h2>
+    <p style="color:#aaa; margin-top:15px; line-height:1.7;">
+      Have a photography or film project? Contact Sanjay Photo Studio &amp; Films.
+    </p>
+    <div class="buttons">
+      <a class="btn" href="tel:+919881584161">📞 Call Us</a>
+      <a class="btn" href="https://wa.me/919881584161" target="_blank" rel="noopener noreferrer">💬 WhatsApp</a>
     </div>
+  </section>
 
-    <div class="film-card">
-      <div class="film-icon">❤️</div>
+  <footer>© 2026 Sanjay Photo Studio &amp; Films</footer>
 
-      <h3>Pre-Wedding Films</h3>
-
-      <p>
-        Turn your pre-wedding memories into a beautiful
-        cinematic story.
-      </p>
-
-      <button class="film-btn" type="button">
-        ▶ Play Film
-      </button>
-    </div>
-
+  <div id="lightbox" class="lightbox" aria-label="Image viewer" aria-modal="true" role="dialog">
+    <button class="close-lightbox" type="button" aria-label="Close image">&times;</button>
+    <img id="lightbox-img" src="" alt="Full size photography">
   </div>
 
-  </section>
-<section id="contact">
-
-  <h2>Let's Create <span class="gold">Memories</span></h2>
-
-  <p style="color:#aaa; margin-top:15px;">
-    Have a photography or film project?
-    Contact Sanjay Photo Studio & Films.
-  </p>
-
-  <div class="buttons">
-
-    <a class="btn" href="tel:+919881584161">
-      📞 Call Us
-    </a>
-
-    <a class="btn"
-       href="https://wa.me/+919881584161"
-       target="_blank">
-      💬 WhatsApp
-    </a>
-
+  <!-- Floating Owner Login button -->
+  <div id="owner-login">
+    <p id="owner-status" role="status" aria-live="polite"></p>
+    <button id="owner-login-button" type="button">🔐 Owner Login with Google</button>
   </div>
 
-</section>
-  </section>
-  <footer>
-    © 2026 Sanjay Photo Studio & Films
-  </footer>
-  <div id="lightbox" class="lightbox">
-  <span class="close-lightbox">&times;</span>
+  <script>
+    const galleryImages = document.querySelectorAll(".gallery-item img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeLightbox = document.querySelector(".close-lightbox");
 
-  <img id="lightbox-img" src="" alt="Full size photography">
-</div>
-
-<script>
-  const galleryImages = document.querySelectorAll(".gallery-item img");
-  const lightbox = document.getElementById("lightbox");
-  const lightboxImg = document.getElementById("lightbox-img");
-  const closeLightbox = document.querySelector(".close-lightbox");
-
-  galleryImages.forEach(function(image) {
-    image.addEventListener("click", function() {
-      lightbox.style.display = "flex";
-      lightboxImg.src = image.src;
+    galleryImages.forEach((image) => {
+      image.addEventListener("click", () => {
+        lightbox.style.display = "flex";
+        lightboxImg.src = image.src;
+        lightboxImg.alt = image.alt || "Full size photography";
+      });
     });
-  });
 
-  closeLightbox.addEventListener("click", function() {
-    lightbox.style.display = "none";
-  });
-
-  lightbox.addEventListener("click", function(event) {
-    if (event.target === lightbox) {
+    closeLightbox.addEventListener("click", () => {
       lightbox.style.display = "none";
+      lightboxImg.src = "";
+    });
+
+    lightbox.addEventListener("click", (event) => {
+      if (event.target === lightbox) {
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        lightbox.style.display = "none";
+        lightboxImg.src = "";
+      }
+    });
+
+    document.querySelectorAll(".film-btn").forEach((button) => {
+      button.addEventListener("click", () => {
+        alert(button.dataset.film + " video has not been connected yet.");
+      });
+    });
+  </script>
+
+  <!-- Firebase Google Sign-In. Keep this module before the closing body tag. -->
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
+    import {
+      getAuth,
+      GoogleAuthProvider,
+      signInWithPopup,
+      signOut
+    } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyAxzXdINs2QC8Evft_CC8uXpJwnlBGynTo",
+      authDomain: "sanjay-photo-studio.firebaseapp.com",
+      projectId: "sanjay-photo-studio",
+      storageBucket: "sanjay-photo-studio.firebasestorage.app",
+      messagingSenderId: "225740647964",
+      appId: "1:225740647964:web:05c2b77fdaec7af930b9d9",
+      measurementId: "G-TJDSVN488Y"
+    };
+
+    // Replace this placeholder with the exact Google account email that owns the site.
+    // Do not share your email/password here; edit it directly in GitHub.
+    const OWNER_EMAIL = "piyushsawant7541@gmail.com";
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+    const provider = new GoogleAuthProvider();
+    const ownerButton = document.getElementById("owner-login-button");
+    const ownerStatus = document.getElementById("owner-status");
+
+    function showOwnerStatus(message) {
+      ownerStatus.textContent = message;
+      ownerStatus.classList.add("visible");
     }
-  });
-                                               </script>
+
+    async function googleLogin() {
+      ownerButton.disabled = true;
+      ownerButton.textContent = "Opening Google sign-in…";
+      try {
+        const result = await signInWithPopup(auth, provider);
+        const email = (result.user.email || "").toLowerCase();
+        const allowedEmail = OWNER_EMAIL.trim().toLowerCase();
+
+        if (!allowedEmail || allowedEmail === "replace_with_owner_google_email" || email !== allowedEmail) {
+          await signOut(auth);
+          showOwnerStatus("Access not granted: this Google account is not configured as the site owner.");
+          alert("This Google account is not configured as the site owner. Please set OWNER_EMAIL in index.html to the correct account email.");
+          return;
+        }
+
+        showOwnerStatus("Google sign-in verified for the configured owner account. Admin upload features are not configured yet.");
+        alert("Google sign-in successful. Owner-only upload/admin features still need secure setup.");
+      } catch (error) {
+        console.error("Google sign-in error:", error);
+        showOwnerStatus("Google sign-in failed: " + (error.message || "Unknown error"));
+        alert("Google sign-in failed: " + (error.message || "Please check Firebase Authorized domains and try again."));
+      } finally {
+        ownerButton.disabled = false;
+        ownerButton.textContent = "🔐 Owner Login with Google";
+      }
+    }
+
+    ownerButton.addEventListener("click", googleLogin);
+  </script>
 </body>
-  <!-- Firebase Google Login -->
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.0/firebase-app.js";
-import {
-  getAuth,
-  GoogleAuthProvider,
-  signInWithPopup
-} from "https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js";
-
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyAxzXdINs2QC8Evft_CC8uXpJwnlBGynTo",
-  authDomain: "sanjay-photo-studio.firebaseapp.com",
-  projectId: "sanjay-photo-studio",
-  storageBucket: "sanjay-photo-studio.firebasestorage.app",
-  messagingSenderId: "225740647964",
-  appId: "1:225740647964:web:05c2b77fdaec7af930b9d9",
-  measurementId: "G-TJDSVN488Y"
-};
-  const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const provider = new GoogleAuthProvider();
-
-async function googleLogin() {
-  try {
-    const result = await signInWithPopup(auth, provider);
-    alert("Google Login successful!");
-    console.log("Signed in:", result.user.email);
-  } catch (error) {
-    alert("Login failed: " + error.message);
-  }
-}
-  window.googleLogin = googleLogin;
-</script>
 </html>
