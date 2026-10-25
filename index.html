@@ -480,22 +480,120 @@ h1 span {
     </div>
   </section>
 
-  <section id="gallery">
-    <h2>Our <span class="gold">Gallery</span></h2>
-    <div class="gallery-grid">
-      <div class="gallery-item">
-  <img
-    src="https://res.cloudinary.com/xjawnbom/image/upload/v1792916187/file_00000000272082099da7c2e84b89c114.png"
-    alt="Sanjay Photo Studio Photography"
-    loading="lazy">
+  
+<section id="gallery" class="premium-gallery">
+  <h2>Our <span class="gold">Gallery</span></h2>
+  <p class="gallery-subtitle">
+    Capturing Moments. Creating Memories.
+  </p>
+
+  <!-- Premium Event Cards -->
+  <div class="event-grid" id="event-categories">
+
+    <article class="event-card">
+      <div class="event-card-content">
+        <span class="event-label">SPECIAL MOMENTS</span>
+        <h3>Wedding</h3>
+        <p>Beautiful memories captured forever.</p>
+        <button class="gallery-btn"
+          onclick="openEventGallery('Wedding')">
+          Explore Gallery →
+        </button>
       </div>
-      <div class="gallery-item"><img src="IMG_20260806_205022.png" alt="Sanjay Photo Studio Photography" loading="lazy"></div>
-      <div class="gallery-item"><img src="IMG_20260819_224235.png" alt="Sanjay Photo Studio Photography" loading="lazy"></div>
-      <div class="gallery-item"><img src="IMG_20260819_224555.jpg" alt="Sanjay Photo Studio Photography" loading="lazy"></div>
-      <div class="gallery-item"><img src="IMG_20260819_224612.jpg" alt="Sanjay Photo Studio Photography" loading="lazy"></div>
-      <div class="gallery-item"><img src="IMG_20260819_224635.jpg" alt="Sanjay Photo Studio Photography" loading="lazy"></div>
+    </article>
+
+    <article class="event-card">
+      <div class="event-card-content">
+        <span class="event-label">CELEBRATIONS</span>
+        <h3>Events</h3>
+        <p>Birthdays, engagements and all occasions.</p>
+        <button class="gallery-btn"
+          onclick="openEventGallery('Events')">
+          Explore Gallery →
+        </button>
+      </div>
+    </article>
+
+    <article class="event-card">
+      <div class="event-card-content">
+        <span class="event-label">LOVE STORIES</span>
+        <h3>Pre-Wedding</h3>
+        <p>Creative and cinematic memories.</p>
+        <button class="gallery-btn"
+          onclick="openEventGallery('Pre-Wedding')">
+          Explore Gallery →
+        </button>
+      </div>
+    </article>
+
+  </div>
+
+  <!-- Selected Event Gallery -->
+  <div id="event-gallery-view" hidden>
+    <button class="gallery-btn"
+      onclick="closeEventGallery()">
+      ← Back to Events
+    </button>
+
+    <h3 id="event-gallery-title">Event Gallery</h3>
+
+    <div class="media-tabs">
+      <button class="gallery-btn"
+        onclick="showGalleryMedia('photos')">
+        📸 Photos
+      </button>
+
+      <button class="gallery-btn"
+        onclick="showGalleryMedia('videos')">
+        ▶ Videos
+      </button>
     </div>
-  </section>
+
+    <!-- Existing photos preserved -->
+    <div id="event-photos" class="media-grid">
+
+      <div class="gallery-item">
+        <img
+          src="https://res.cloudinary.com/xjawnbom/image/upload/v1792916187/file_00000000272082099da7c2e84b89c114.png"
+          alt="Sanjay Photo Studio Photography"
+          loading="lazy">
+      </div>
+
+      <div class="gallery-item">
+        <img src="IMG_20260806_205022.png"
+          alt="Studio Photography" loading="lazy">
+      </div>
+
+      <div class="gallery-item">
+        <img src="IMG_20260819_224235.png"
+          alt="Studio Photography" loading="lazy">
+      </div>
+
+      <div class="gallery-item">
+        <img src="IMG_20260819_224555.jpg"
+          alt="Studio Photography" loading="lazy">
+      </div>
+
+      <div class="gallery-item">
+        <img src="IMG_20260819_224612.jpg"
+          alt="Studio Photography" loading="lazy">
+      </div>
+
+      <div class="gallery-item">
+        <img src="IMG_20260819_224635.jpg"
+          alt="Studio Photography" loading="lazy">
+      </div>
+
+    </div>
+
+    <!-- Video film cards will be connected next -->
+    <div id="event-videos" class="media-grid" hidden>
+      <p>Our films and videos will appear here.</p>
+    </div>
+
+  </div>
+</section>
+
 
   <section id="films">
     <h2>Our <span class="gold">Films</span></h2>
