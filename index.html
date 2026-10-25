@@ -891,5 +891,36 @@ h1 span {
 
     ownerButton.addEventListener("click", googleLogin);
   </script>
+  
+<script>
+  function openEventGallery(eventName) {
+    const view = document.getElementById("event-gallery-view");
+    const categories = document.getElementById("event-categories");
+    const title = document.getElementById("event-gallery-title");
+
+    title.textContent = eventName + " Gallery";
+    categories.hidden = true;
+    view.hidden = false;
+
+    showGalleryMedia("photos");
+    view.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
+
+  function closeEventGallery() {
+    document.getElementById("event-gallery-view").hidden = true;
+    document.getElementById("event-categories").hidden = false;
+
+    document.getElementById("gallery").scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }
+
+  function showGalleryMedia(type) {
+    document.getElementById("event-photos").hidden = type !== "photos";
+    document.getElementById("event-videos").hidden = type !== "videos";
+  }
+</script>
+
 </body>
 </html>
