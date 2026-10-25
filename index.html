@@ -567,6 +567,138 @@ h1 span {
   }
 }
 
+/* LATEST EVENTS — PREMIUM BLACK & GOLD */
+.latest-events {
+  padding: 65px 20px;
+  background: #0b0b0b;
+  color: #fff;
+  text-align: center;
+}
+
+.latest-events-heading {
+  max-width: 650px;
+  margin: 0 auto 35px;
+}
+
+.latest-label {
+  color: #d4af37;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.latest-events-heading h2 {
+  font-size: clamp(30px, 5vw, 42px);
+  margin: 12px 0;
+}
+
+.latest-events .gold {
+  color: #d4af37;
+}
+
+.latest-events-heading p {
+  color: #bdbdbd;
+  line-height: 1.7;
+}
+
+.latest-events-grid {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  text-align: left;
+}
+
+.latest-event-card {
+  overflow: hidden;
+  background: #121212;
+  border: 1px solid #3b321b;
+  border-radius: 14px;
+  transition: transform .3s ease, border-color .3s ease;
+}
+
+.latest-event-card:hover {
+  transform: translateY(-6px);
+  border-color: #d4af37;
+}
+
+.latest-event-image {
+  min-height: 190px;
+  display: flex;
+  align-items: flex-end;
+  padding: 18px;
+  background: linear-gradient(0deg, #000, #292315);
+}
+
+.latest-event-image span {
+  color: #e4c65a;
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.latest-event-info {
+  padding: 20px;
+}
+
+.latest-event-info h3 {
+  color: #d4af37;
+  font-size: 20px;
+  margin: 0 0 10px;
+}
+
+.latest-event-info p {
+  color: #c5c5c5;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.latest-event-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: #e4c65a;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.latest-event-link:hover {
+  color: #fff;
+}
+
+.latest-view-all {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 12px 22px;
+  border: 1px solid #d4af37;
+  border-radius: 7px;
+  color: #d4af37;
+  text-decoration: none;
+  transition: .25s ease;
+}
+
+.latest-view-all:hover {
+  background: #d4af37;
+  color: #080808;
+}
+
+@media (max-width: 750px) {
+  .latest-events-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+
+  .latest-event-image {
+    min-height: 170px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .latest-event-card,
+  .latest-view-all {
+    transition: none;
+  }
+}
+
   </style>
 </head>
 
@@ -582,14 +714,70 @@ h1 span {
     </div>
   </nav>
 
-  <section class="hero" id="home">
-    <div class="hero-content">
-      <div class="tag">SANJAY PHOTO STUDIO &amp; FILMS</div>
-      <h1>Capturing <span>Moments.</span><br>Creating Memories.</h1>
-      <p>Professional Photography &amp; Cinematic Films for your most beautiful moments.</p>
-      <a href="#services" class="btn">Explore Our Work</a>
-    </div>
-  </section>
+  
+<section class="hero" id="home">
+  <div class="hero-content">
+    <div class="tag">SANJAY PHOTO STUDIO &amp; FILMS</div>
+
+    <h1>Capturing <span>Moments.</span><br>
+      Creating Memories.
+    </h1>
+
+    <p>Professional Photography &amp; Cinematic Films for your most beautiful moments.</p>
+
+    <a href="#services" class="btn">Explore Our Work</a>
+    <a href="#gallery" class="btn">View Gallery</a>
+  </div>
+</section>
+
+<!-- LATEST EVENTS SECTION -->
+<section id="latest-events" class="latest-events">
+  <div class="latest-events-heading">
+    <span class="latest-label">OUR RECENT WORK</span>
+    <h2>Latest <span class="gold">Events</span></h2>
+    <p>Every moment tells a story. Explore the memories we've captured.</p>
+  </div>
+
+  <div class="latest-events-grid">
+
+    <article class="latest-event-card">
+      <div class="latest-event-image wedding-image">
+        <span>WEDDING</span>
+      </div>
+      <div class="latest-event-info">
+        <h3>Wedding Photography</h3>
+        <p>Beautiful moments, remembered forever.</p>
+        <a href="#gallery" class="latest-event-link">Explore Gallery →</a>
+      </div>
+    </article>
+
+    <article class="latest-event-card">
+      <div class="latest-event-image events-image">
+        <span>CELEBRATIONS</span>
+      </div>
+      <div class="latest-event-info">
+        <h3>Events &amp; Celebrations</h3>
+        <p>Special occasions captured with care.</p>
+        <a href="#gallery" class="latest-event-link">Explore Gallery →</a>
+      </div>
+    </article>
+
+    <article class="latest-event-card">
+      <div class="latest-event-image prewedding-image">
+        <span>LOVE STORIES</span>
+      </div>
+      <div class="latest-event-info">
+        <h3>Pre-Wedding Films</h3>
+        <p>Creative frames and cinematic memories.</p>
+        <a href="#gallery" class="latest-event-link">Explore Gallery →</a>
+      </div>
+    </article>
+
+  </div>
+
+  <a href="#gallery" class="latest-view-all">View Full Gallery →</a>
+</section>
+
 
   <section class="about" id="about">
     <h2>About <span class="gold">Us</span></h2>
