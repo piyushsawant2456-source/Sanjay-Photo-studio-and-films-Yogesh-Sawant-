@@ -1,45 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#080808">
-  <meta name="description" content="Sanjay Photo Studio & Films — photography, wedding films, events and pre-wedding memories.">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Sanjay Photo Studio & Films — photography and films for weddings, celebrations and special moments.">
   <title>Sanjay Photo Studio & Films</title>
   <style>
-    :root{--bg:#070808;--panel:#101111;--panel2:#151616;--gold:#e0b94f;--gold2:#f5d879;--text:#f7f4ec;--muted:#a9a8a1;--line:rgba(224,185,79,.24);--danger:#ff7777;--success:#76d7a0;--header-h:76px;--nav-h:72px}
+    :root{--bg:#f5f5f3;--paper:#fff;--ink:#111;--muted:#626262;--soft:#ededeb;--line:#deded9;--gold:#b08a3c;--gold-soft:#f4ead4;--danger:#b42318;--success:#16794a;--header-h:76px;--nav-h:88px}
     *{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth;scroll-padding-top:88px}
-    body{font-family:Inter,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;padding-bottom:calc(var(--nav-h) + env(safe-area-inset-bottom));overflow-x:hidden}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6;padding-bottom:calc(var(--nav-h) + env(safe-area-inset-bottom));overflow-x:hidden}
     a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit}button{cursor:pointer}
-    .app-header{height:var(--header-h);position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px clamp(16px,4vw,48px);background:rgba(5,6,6,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
-    .brand{display:flex;align-items:center;gap:11px;min-width:0}.brand-mark{width:47px;height:47px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#f8d46c,#bd8b24);color:#090909;font-size:23px;box-shadow:0 0 24px #d7a83235;flex:0 0 auto}.brand-name{font-family:Georgia,serif;color:var(--gold2);font-weight:700;font-size:16px;white-space:nowrap}.brand-tag{font-size:10px;color:#c4c2b9;letter-spacing:.5px}.desktop-nav{display:flex;align-items:center;gap:24px}.desktop-nav a{font-size:13px;color:#d0cec7;transition:.2s}.desktop-nav a:hover,.desktop-nav a.active{color:var(--gold2)}.admin-shortcut{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:#111;color:var(--gold2);font-size:18px}
-    main section{padding:76px clamp(16px,5vw,64px);scroll-margin-top:var(--header-h)}.section-head{max-width:760px;margin:0 auto 30px;text-align:center}.eyebrow{display:block;color:var(--gold);font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px}.section-head h2{font:700 clamp(28px,5vw,43px)/1.12 Georgia,serif;margin-bottom:10px}.section-head p{color:var(--muted);font-size:14px}
-    .hero{min-height:min(770px,calc(100svh - var(--header-h)));display:flex;align-items:center;padding:54px clamp(18px,7vw,100px) 60px;position:relative;isolation:isolate;background:#090909 url('https://res.cloudinary.com/xjawnbom/image/upload/v1792916187/file_00000000272082099da7c2e84b89c114.png') center/cover no-repeat}.hero:before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(0,0,0,.94) 0%,rgba(0,0,0,.78) 42%,rgba(0,0,0,.22) 100%),linear-gradient(0deg,#070808 0%,transparent 42%)}.hero-inner{max-width:680px}.hero .eyebrow{margin-bottom:14px}.hero h1{font:700 clamp(42px,8vw,76px)/1.02 Georgia,serif;margin-bottom:18px;letter-spacing:-1px}.gold{color:var(--gold2)}.hero-copy{max-width:520px;color:#e1dfd8;font-size:clamp(14px,2vw,17px);margin-bottom:26px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 21px;border-radius:30px;border:1px solid var(--gold);font-weight:750;font-size:13px;transition:transform .2s,background .2s,color .2s}.btn-primary{background:linear-gradient(120deg,#f5d36d,#d49f2f);color:#111;border:0;box-shadow:0 8px 24px #d6a43b32}.btn-outline{color:var(--gold2);background:#09090985}.btn:hover{transform:translateY(-2px)}.quick-actions{display:grid;grid-template-columns:repeat(2,minmax(0,190px));gap:12px;margin-top:32px}.quick-card{min-height:112px;padding:17px;border:1px solid #715b2e;border-radius:15px;background:rgba(8,9,9,.76);display:flex;flex-direction:column;justify-content:center;gap:5px;transition:.25s}.quick-card:hover{border-color:var(--gold2);transform:translateY(-3px);background:#13120e}.quick-icon{font-size:23px;color:var(--gold2)}.quick-card strong{font:700 15px Georgia,serif}.quick-card span:last-child{font-size:11px;color:var(--muted)}
-    .about-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}.about-photo{min-height:370px;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#111}.about-photo img{width:100%;height:100%;min-height:370px;object-fit:cover;display:block}.about-copy h2{font:700 clamp(28px,4vw,42px)/1.1 Georgia,serif;margin-bottom:14px}.about-copy p{color:var(--muted);font-size:14px;margin-bottom:12px}.feature-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}.feature-pill{border:1px solid var(--line);border-radius:30px;padding:8px 12px;color:#e4d6aa;font-size:11px}
-    .services-grid{max-width:1120px;margin:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.service-card{display:flex;align-items:center;gap:13px;min-height:100px;padding:13px;background:linear-gradient(145deg,#141515,#0d0e0e);border:1px solid #302a1c;border-radius:15px;transition:.25s}.service-card:hover{border-color:var(--gold);transform:translateY(-3px)}.service-icon{width:58px;height:58px;display:grid;place-items:center;flex:0 0 auto;background:#282113;border-radius:12px;color:var(--gold2);font-size:25px}.service-card h3{font:700 14px Georgia,serif;margin-bottom:4px}.service-card p{font-size:10px;color:var(--muted)}.service-arrow{margin-left:auto;color:var(--gold2);font-size:18px}.service-note{text-align:center;color:var(--muted);font-size:11px;margin-top:20px}
-    .gallery-section{background:linear-gradient(180deg,#0a0b0b,#070808)}.gallery-controls{max-width:1080px;margin:0 auto 22px;display:flex;flex-direction:column;gap:12px}.filter-row{display:flex;justify-content:center;flex-wrap:wrap;gap:8px}.filter-btn{border:1px solid #39342a;background:#0c0d0d;color:#ddd;border-radius:30px;padding:9px 16px;font-size:11px}.filter-btn.active,.filter-btn:hover{background:linear-gradient(120deg,#f2ce66,#d5a33c);border-color:transparent;color:#111;font-weight:800}.gallery-grid{max-width:1080px;margin:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.media-card{position:relative;overflow:hidden;aspect-ratio:4/3;background:#151515;border:1px solid #342c1b;border-radius:13px;cursor:pointer}.media-card img,.media-card video{display:block;width:100%;height:100%;object-fit:cover;transition:transform .45s}.media-card:hover img{transform:scale(1.05)}.media-overlay{position:absolute;inset:auto 0 0;padding:28px 12px 11px;background:linear-gradient(transparent,#000d);font-size:11px;font-weight:750}.video-badge{position:absolute;top:10px;right:10px;background:#000b;color:var(--gold2);border:1px solid var(--line);border-radius:18px;padding:4px 8px;font-size:10px}.empty-state{grid-column:1/-1;text-align:center;padding:40px 15px;border:1px dashed #514327;border-radius:14px;color:var(--muted);font-size:13px}.gallery-foot{text-align:center;color:#89877f;font-size:11px;margin:18px auto 0}
-    .films-strip{max-width:1060px;margin:auto;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.film-tile{border:1px solid var(--line);background:#111;border-radius:15px;padding:22px;text-align:center}.film-tile b{display:block;color:var(--gold2);font:700 18px Georgia,serif;margin-bottom:6px}.film-tile p{color:var(--muted);font-size:12px}
-    .contact-card{max-width:850px;margin:auto;background:linear-gradient(145deg,#151515,#0d0e0e);border:1px solid var(--line);border-radius:20px;padding:clamp(22px,4vw,38px);display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}.contact-card h3{font:700 25px Georgia,serif;margin-bottom:9px}.contact-card p{color:var(--muted);font-size:13px;margin-bottom:16px}.contact-info{display:grid;gap:12px}.contact-line{display:flex;gap:10px;align-items:center;font-size:13px;color:#e9e5d8}.contact-line span:first-child{font-size:19px;color:var(--gold2)}.contact-actions{display:flex;flex-wrap:wrap;gap:10px}.footer{padding:25px 18px calc(22px + env(safe-area-inset-bottom));text-align:center;background:#050606;border-top:1px solid var(--line);color:#85837b;font-size:11px}
-    .bottom-nav{position:fixed;z-index:60;bottom:0;left:0;right:0;min-height:var(--nav-h);padding:7px 8px calc(7px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(5,1fr);background:rgba(8,10,10,.96);backdrop-filter:blur(18px);border:1px solid #4a4029;border-bottom:0;border-radius:17px 17px 0 0}.bottom-nav a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;color:#a9aaa8;font-size:9px}.bottom-nav .nav-ico{font-size:18px;line-height:1.1}.bottom-nav a.active{color:var(--gold2);font-weight:800}.bottom-nav a.active .nav-ico{filter:drop-shadow(0 0 5px #e0b94f66)}
-    .modal-backdrop{position:fixed;inset:0;z-index:100;background:#000c;display:none;align-items:center;justify-content:center;padding:16px}.modal-backdrop.open{display:flex}.viewer{position:relative;width:min(950px,100%);max-height:90dvh;background:#080909;border:1px solid var(--line);border-radius:17px;padding:14px;display:flex;align-items:center;justify-content:center}.viewer img,.viewer video{display:block;max-width:100%;max-height:82dvh;object-fit:contain;border-radius:10px}.modal-close{position:absolute;top:8px;right:8px;z-index:2;width:38px;height:38px;border:1px solid var(--line);border-radius:50%;background:#080808;color:white;font-size:22px}
-    .admin-backdrop{position:fixed;inset:0;z-index:110;background:#050606f5;display:none;overflow-y:auto;padding:18px}.admin-backdrop.open{display:block}.admin-shell{max-width:1050px;margin:0 auto;padding:12px 0 45px}.admin-top{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:20px}.admin-top h2{font:700 27px Georgia,serif}.admin-top p{color:var(--muted);font-size:12px}.admin-close{border:1px solid var(--line);background:#111;color:var(--gold2);border-radius:30px;padding:9px 14px}.admin-panel{background:#111313;border:1px solid var(--line);border-radius:17px;padding:20px;margin-bottom:16px}.admin-panel h3{font:700 18px Georgia,serif;margin-bottom:12px}.admin-panel p{color:var(--muted);font-size:12px}.admin-login{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}.admin-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:11px;color:#c9c4b6}.field input,.field select,.field textarea{width:100%;padding:11px 12px;background:#080a0a;color:white;border:1px solid #3d3a31;border-radius:9px;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}.field input[type=file]{padding:9px}.admin-actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:13px}.progress-wrap{height:7px;background:#292a29;border-radius:10px;overflow:hidden;margin-top:12px;display:none}.progress-bar{height:100%;width:0;background:var(--gold)}.status{margin-top:10px;font-size:12px;color:var(--muted);overflow-wrap:anywhere}.status.error{color:var(--danger)}.status.success{color:var(--success)}.admin-media-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:14px}.admin-media-item{display:grid;grid-template-columns:90px 1fr;gap:10px;padding:10px;background:#090b0b;border:1px solid #302d25;border-radius:11px;min-width:0}.admin-media-item img{width:90px;height:78px;object-fit:cover;border-radius:7px;background:#222}.admin-media-i
-tem h4{font-size:12px;margin-bottom:4px;overflow-wrap:anywhere}.admin-media-item small{display:block;color:var(--muted);font-size:10px}.admin-media-item input[type=text]{width:100%;background:#141515;color:white;border:1px solid #3b3a34;border-radius:6px;padding:6px;margin:6px 0;font-size:11px}.small-btn{border:1px solid #51452a;background:#111;color:var(--gold2);border-radius:7px;padding:6px 9px;font-size:10px;margin:3px 4px 0 0}.small-btn.danger{border-color:#703737;color:#ff9b9b}.hidden{display:none!important}.toast{position:fixed;z-index:200;left:50%;bottom:calc(var(--nav-h) + 18px);transform:translate(-50%,20px);background:#171919;border:1px solid var(--line);border-radius:12px;padding:11px 15px;max-width:min(90vw,480px);font-size:12px;opacity:0;pointer-events:none;transition:.25s}.toast.show{opacity:1;transform:translate(-50%,0)}
-    @media(max-width:850px){.desktop-nav{display:none}.about-grid{grid-template-columns:1fr}.about-photo{min-height:260px}.about-photo img{min-height:260px}.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-card{grid-template-columns:1fr}.admin-media-list{grid-template-columns:1fr}}
-    @media(max-width:520px){:root{--header-h:68px;--nav-h:68px}.brand-mark{width:41px;height:41px}.brand-name{font-size:13px}.brand-tag{font-size:9px}.admin-shortcut{width:38px;height:38px}.hero{min-height:670px;align-items:center;padding:48px 22px}.hero:before{background:linear-gradient(90deg,#000d,#0008),linear-gradient(0deg,#070808 0%,transparent 50%)}.hero h1{font-size:45px}.quick-actions{grid-template-columns:repeat(2,minmax(0,1fr));max-width:390px}.quick-card{min-height:100px;padding:13px}.services-grid{grid-template-columns:1fr}.service-card{min-height:84px}.gallery-grid{gap:8px}.media-card{border-radius:9px}.filter-btn{padding:8px 12px}.films-strip{grid-template-columns:1fr}.contact-card{padding:21px}.admin-form{grid-template-columns:1fr}.field.full{grid-column:auto}.admin-backdrop{padding:10px}.admin-panel{padding:14px}}
+    .app-header{height:var(--header-h);position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:9px clamp(15px,4vw,48px);background:rgba(255,255,255,.96);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    .brand{display:flex;align-items:center;gap:11px;min-width:0}.brand-mark{width:47px;height:47px;flex:0 0 auto;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:#fff;font-size:22px;box-shadow:inset 0 0 0 2px var(--gold)}.brand-name{font-family:Georgia,serif;font-size:clamp(13px,2vw,17px);font-weight:700;letter-spacing:.1px;white-space:nowrap}.brand-tag{font:11px Georgia,serif;color:#686868;letter-spacing:.4px}.desktop-nav{display:flex;align-items:center;gap:22px}.desktop-nav a{font-size:12px;font-weight:700;color:#444;transition:color .2s}.desktop-nav a:hover,.desktop-nav a.active{color:var(--gold)}.admin-shortcut{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--ink);font-size:19px}
+    main section{padding:72px clamp(16px,5vw,64px);scroll-margin-top:var(--header-h)}.section-head{max-width:760px;margin:0 auto 30px;text-align:center}.eyebrow{display:block;color:var(--gold);font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase;margin-bottom:8px}.section-head h2{font:700 clamp(28px,5vw,43px)/1.12 Georgia,serif;margin-bottom:10px;letter-spacing:-.3px}.section-head p{color:var(--muted);font-size:14px}.gold{color:var(--gold)}
+    .hero{min-height:min(690px,calc(100svh - var(--header-h)));display:flex;align-items:center;padding:65px clamp(20px,8vw,110px);position:relative;isolation:isolate;background:linear-gradient(135deg,#fff 0%,#f1f1ee 55%,#e8e8e4 100%);overflow:hidden}.hero:before{content:"";position:absolute;width:min(55vw,560px);height:min(55vw,560px);right:-8%;top:8%;border:1px solid rgba(176,138,60,.22);border-radius:50%;z-index:-1}.hero:after{content:"";position:absolute;width:min(38vw,390px);height:min(38vw,390px);right:2%;top:20%;border:1px solid rgba(17,17,17,.07);border-radius:50%;z-index:-1}.hero-inner{max-width:720px}.hero .eyebrow{margin-bottom:17px}.hero h1{font:700 clamp(43px,8vw,78px)/1.02 Georgia,serif;margin-bottom:19px;letter-spacing:-1.6px}.hero-copy{max-width:560px;color:#555;font-size:clamp(14px,2vw,17px);margin-bottom:25px}.hero-actions{display:flex;flex-wrap:wrap;gap:11px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:13px 22px;border-radius:9px;border:1px solid var(--ink);font-weight:750;font-size:13px;transition:transform .2s,background .2s,color .2s}.btn-primary{background:var(--ink);color:#fff;border-color:var(--ink)}.btn-outline{color:var(--ink);background:transparent}.btn:hover{transform:translateY(-2px)}.quick-actions{display:grid;grid-template-columns:repeat(2,minmax(0,190px));gap:12px;margin-top:32px}.quick-card{min-height:108px;padding:16px;border:1px solid #d5d5d0;border-radius:13px;background:rgba(255,255,255,.9);display:flex;flex-direction:column;justify-content:center;gap:4px;transition:.22s}.quick-card:hover{border-color:var(--gold);transform:translateY(-3px)}.quick-icon{font-size:22px;color:var(--gold)}.quick-card strong{font:700 15px Georgia,serif}.quick-card span:last-child{font-size:11px;color:var(--muted)}
+    #about{background:#fff}.about-copy{max-width:900px;margin:auto;text-align:left}.about-copy h2{font:700 clamp(28px,4vw,42px)/1.1 Georgia,serif;margin-bottom:17px}.about-copy p{color:#555;font-size:15px;line-height:1.85;margin-bottom:14px;max-width:850px}.owner-copy{margin-top:30px;padding:22px 23px;border-left:3px solid var(--gold);background:#f7f7f4;border-radius:0 12px 12px 0}.owner-copy h3{font:700 21px Georgia,serif;margin-bottom:7px}.owner-copy p{margin:0;font-size:14px}
+    #services{background:var(--bg)}.services-grid{max-width:1120px;margin:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}.service-card{display:flex;align-items:center;gap:13px;min-height:91px;padding:13px;background:#fff;border:1px solid #e1e1dc;border-radius:12px;transition:border-color .2s,transform .2s}.service-card:hover{border-color:#c6aa75;transform:translateY(-2px)}.service-icon{width:53px;height:53px;display:grid;place-items:center;flex:0 0 auto;background:#f0f0ed;border-radius:10px;color:#222;font-size:23px}.service-card h3{font:700 13px/1.35 Georgia,serif;margin-bottom:4px}.service-card p{font-size:10px;color:var(--muted);line-height:1.4}.service-note{text-align:center;color:var(--muted);font-size:11px;margin-top:18px}
+    .latest-section{background:#fff}.latest-date{display:inline-flex;align-items:center;gap:7px;padding:7px 12px;background:#f6f2e9;color:#73561d;border-radius:30px;font-size:11px;font-weight:700;margin-top:12px}.gallery-section{background:#f5f5f3}.gallery-controls{max-width:1080px;margin:0 auto 22px;display:flex;flex-direction:column;gap:12px}.filter-row{display:flex;justify-content:center;flex-wrap:wrap;gap:8px}.filter-btn{border:1px solid #d3d3ce;background:#fff;color:#333;border-radius:30px;padding:9px 16px;font-size:11px;font-weight:700}.filter-btn.active,.filter-btn:hover{background:#171717;border-color:#171717;color:#fff}.gallery-grid{max-width:1080px;margin:auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.media-card{display:flex;flex-direction:column;text-align:left;overflow:hidden;min-width:0;background:#fff;border:1px solid #e1e1dc;border-radius:12px;cursor:pointer;box-shadow:0 4px 15px #00000008;transition:transform .2s,border-color .2s}.media-card:hover{transform:translateY(-3px);border-color:#c4a66c}.media-card img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#e5e5e2}.media-caption{display:block;padding:11px 12px 12px}.media-caption strong{display:block;font:700 13px Georgia,serif;color:#151515;overflow-wrap:anywhere}.media-caption small{display:block;margin-top:4px;color:#777;font-size:10px}.video-badge{position:absolute;top:10px;right:10px;background:#111d;color:#fff;border-radius:18px;padding:4px 8px;font-size:10px}.media-image-wrap{position:relative}.empty-state{grid-column:1/-1;text-align:center;padding:35px 15px;border:1px dashed #c9c9c2;border-radius:14px;color:#666;font-size:13px;background:#fff}.gallery-foot{text-align:center;color:#777;font-size:11px;margin:18px auto 0}
+    #contact{background:#fff}.contact-card{max-width:850px;margin:auto;background:#f7f7f4;border:1px solid #e1e1dc;border-radius:16px;padding:clamp(22px,4vw,38px);display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:center}.contact-card h3{font:700 25px Georgia,serif;margin-bottom:9px}.contact-card p{color:var(--muted);font-size:13px;margin-bottom:16px}.contact-info{display:grid;gap:12px}.contact-line{display:flex;gap:10px;align-items:center;font-size:13px;color:#333}.contact-line span:first-child{font-size:18px;color:var(--gold)}.contact-actions{display:flex;flex-wrap:wrap;gap:10px}.footer{padding:24px 18px calc(22px + env(safe-area-inset-bottom));text-align:center;background:#111;color:#ddd;font-size:11px}
+    .bottom-nav{position:fixed;z-index:60;bottom:0;left:0;right:0;min-height:var(--nav-h);padding:8px 8px calc(8px + env(safe-area-inset-bottom));display:grid;grid-template-columns:repeat(5,1fr);background:rgba(255,255,255,.98);backdrop-filter:blur(18px);border:1px solid #d7d7d1;border-bottom:0;border-radius:19px 19px 0 0;box-shadow:0 -7px 24px #0000000b}.bottom-nav a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;color:#626262;font-size:11px;font-weight:600}.bottom-nav .nav-ico{font-size:24px;line-height:1.1;color:#333}.bottom-nav a.active{color:#111;font-weight:800}.bottom-nav a.active .nav-ico{color:var(--gold)}
+    .modal-backdrop{position:fixed;inset:0;z-index:100;background:#000c;display:none;align-items:center;justify-content:center;padding:16px}.modal-backdrop.open{display:flex}.viewer{position:relative;width:min(950px,100%);max-height:90dvh;background:#fff;border:1px solid #d5d5d0;border-radius:15px;padding:14px;display:flex;align-items:center;justify-content:center}.viewer img,.viewer video{display:block;max-width:100%;max-height:82dvh;object-fit:contain;border-radius:8px}.modal-close{position:absolute;top:8px;right:8px;z-index:2;width:38px;height:38px;border:1px solid #ddd;border-radius:50%;background:#fff;color:#111;font-size:22px}
+    .admin-backdrop{position:fixed;inset:0;z-index:110;background:#f5f5f3f7;display:none;overflow-y:auto;padding:18px}.admin-backdrop.open{display:block}.admin-shell{max-width:1050px;margin:0 auto;padding:12px 0 45px}.admin-top{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:20px}.admin-top h2{font:700 27px Georgia,serif}.admin-top p{color:var(--muted);font-size:12px}.admin-close{border:1px solid #ccc;background:#fff;color:#111;border-radius:8px;padding:10px 14px}.admin-panel{background:#fff;border:1px solid #ddd;border-radius:14px;padding:20px;margin-bottom:15px}.admin-panel h3{font:700 19px Georgia,serif;margin-bottom:6px}.admin-panel>p{color:#666;font-size:12px;margin-bottom:15px}.admin-login,.admin-actions{display:flex;flex-wrap:wrap;gap:10px}.admin-form{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:11px;color:#444;font-weight:700}.field input,.field select,.field textarea{width:100%;padding:11px 12px;background:#fff;border:1px solid #ccc;border-radius:8px;color:#111;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold)}.field input[type=checkbox]{width:auto}.status{font-size:12px;margin-top:10px;color:#555;overflow-wrap:anywhere}.status.error{color:var(--danger)}.status.success{color:var(--success)}.progress-wrap{display:none;height:7px;background:#eee;border-radius:9px;overflow:hidden;margin-top:9px}.progress-bar{height:100%;width:0;background:#222;transition:width .2s}.admin-media-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:15px}.admin-media-item{display:grid;grid-template-columns:112px 1fr;gap:12px;padding:10px;border:1px solid #e1e1dc;border-radius:10px}.admin-media-item img{width:112px;height:100px;object-fit:cover;border-radius:7px;background:#eee}.admin-media-item h4{font:700 13px Georgia,serif}.admin-media-item small{display:block;color:#777;font-size:10px;margin:3px 0 7px}.
+admin-media-item input[type=text]{width:100%;padding:7px;border:1px solid #ccc;border-radius:6px;margin:3px 0}.small-btn{border:1px solid #ccc;background:#fff;border-radius:6px;padding:6px 9px;font-size:10px;margin:5px 5px 0 0}.small-btn.danger{color:#a21d1d;border-color:#e2b8b8}.hidden{display:none!important}.toast{position:fixed;left:50%;bottom:calc(var(--nav-h) + 16px);transform:translate(-50%,12px);opacity:0;pointer-events:none;z-index:150;background:#171717;color:#fff;padding:11px 16px;border-radius:8px;font-size:12px;transition:.2s;max-width:90vw}.toast.show{opacity:1;transform:translate(-50%,0)}
+    @media(max-width:850px){.desktop-nav{display:none}.services-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.contact-card{grid-template-columns:1fr}.admin-media-list{grid-template-columns:1fr}}
+    @media(max-width:520px){:root{--header-h:69px;--nav-h:94px}.brand-mark{width:41px;height:41px}.brand-name{font-size:12px}.brand-tag{font-size:9px}.admin-shortcut{width:39px;height:39px}.hero{min-height:640px;padding:50px 22px}.hero h1{font-size:45px}.quick-actions{grid-template-columns:repeat(2,minmax(0,1fr));max-width:390px}.quick-card{min-height:104px;padding:13px}.services-grid{grid-template-columns:1fr}.service-card{min-height:82px}.gallery-grid{gap:9px}.media-card{border-radius:9px}.media-caption{padding:9px}.media-caption strong{font-size:12px}.filter-btn{padding:8px 12px}.contact-card{padding:21px}.admin-form{grid-template-columns:1fr}.field.full{grid-column:auto}.admin-backdrop{padding:10px}.admin-panel{padding:14px}.admin-media-item{grid-template-columns:88px 1fr}.admin-media-item img{width:88px;height:88px}.bottom-nav .nav-ico{font-size:25px}.bottom-nav a{font-size:11px}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
   </style>
 </head>
 <body>
   <header class="app-header">
-    <a class="brand" href="#home" aria-label="Sanjay Photo Studio home">
-      <span class="brand-mark" aria-hidden="true">📸</span>
-      <span><span class="brand-name">Sanjay Photo Studio & Films</span><br><span class="brand-tag">Capturing Moments. Creating Memories.</span></span>
-    </a>
-    <nav class="desktop-nav" aria-label="Main navigation">
-      <a href="#home" class="active">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a>
-    </nav>
-    <button class="admin-shortcut" id="open-admin" aria-label="Owner admin">♙</button>
+    <a class="brand" href="#home" aria-label="Sanjay Photo Studio home"><span class="brand-mark" aria-hidden="true">📷</span><span><span class="brand-name">Sanjay Photo Studio & Films</span><br><span class="brand-tag">Capturing Moments. Creating Memories.</span></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="#home" class="active">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></nav>
+    <button class="admin-shortcut" id="open-admin" aria-label="Owner admin" title="Owner login">♙</button>
   </header>
 
   <main>
@@ -47,64 +41,66 @@ tem h4{font-size:12px;margin-bottom:4px;overflow-wrap:anywhere}.admin-media-item
       <div class="hero-inner">
         <span class="eyebrow">Welcome to Sanjay Photo Studio & Films</span>
         <h1>Your Moments.<br><span class="gold">Our Art.</span></h1>
-        <p class="hero-copy">Professional photography and cinematic films for your special occasions. We turn meaningful moments into memories worth keeping.</p>
-        <a class="btn btn-primary" href="#services">Explore Our Work <span>→</span></a>
+        <p class="hero-copy">Photography and films for weddings, celebrations and the moments that matter. Thoughtfully captured, beautifully presented and made to be remembered.</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#services">Explore Our Services <span>→</span></a><a class="btn btn-outline" href="booking.html">Book a Shoot</a></div>
         <div class="quick-actions">
-          <a class="quick-card" href="#gallery"><span class="quick-icon">▧</span><strong>Our Gallery</strong><span>Photos & Films</span></a>
-          <a class="quick-card" href="https://wa.me/919881584161?text=Hello%20Sanjay%20Photo%20Studio%2C%20I%20would%20like%20to%20enquire%20about%20a%20shoot." target="_blank" rel="noopener noreferrer"><span class="quick-icon">▦</span><strong>Book a Shoot</strong><span>Send an enquiry</span></a>
+          <a class="quick-card" href="#gallery"><span class="quick-icon">▧</span><strong>Our Gallery</strong><span>Photos & Videos</span></a>
+          <a class="quick-card" href="booking.html"><span class="quick-icon">▦</span><strong>Book a Shoot</strong><span>Share your event details</span></a>
         </div>
       </div>
     </section>
 
     <section id="about">
-      <div class="about-grid">
-        <div class="about-photo"><img src="IMG_20260806_205022.png" alt="Photography work by Sanjay Photo Studio" loading="lazy" onerror="this.style.display='none'"></div>
-        <div class="about-copy"><span class="eyebrow">About Us</span><h2>Our <span class="gold">Story</span></h2><p>Sanjay Photo Studio & Films is dedicated to capturing beautiful moments and transforming them into timeless memories.</p><p>From weddings and celebrations to pre-wedding stories, our focus is on thoughtful photography, creative framing and memorable films.</p><div class="feature-row"><span class="feature-pill">✦ Photography</span><span class="feature-pill">✦ Cinematic Films</span><span class="feature-pill">✦ Creative Vision</span><span class="feature-pill">✦ Personal Care</span></div></div>
+      <div class="about-copy">
+        <span class="eyebrow">About the Studio</span><h2>Our <span class="gold">Story</span></h2>
+        <p>Sanjay Photo Studio & Films is a photography and filmmaking studio focused on preserving the moments that make every occasion special. From weddings and family celebrations to pre-wedding shoots, portraits and events, the studio brings photography and video services together in one place.</p>
+        <p>Every project begins with understanding the occasion and the customer's expectations. Our aim is to make the process clear and comfortable, capture meaningful moments with care, and deliver photographs and films that customers can revisit for years.</p>
+        <div class="owner-copy"><h3>About the Owner</h3><p>The studio is guided by its owner, who is the main point of contact for customers and oversees each assignment from enquiry to delivery. The owner's name and personal introduction can be added here once the preferred details are provided.</p></div>
       </div>
     </section>
 
     <section id="services">
-      <div class="section-head"><span class="eyebrow">Our Services</span><h2>What We <span class="gold">Offer</span></h2><p>Photography and videography solutions for your special moments.</p></div>
+      <div class="section-head"><span class="eyebrow">Our Services</span><h2>What We <span class="gold">Offer</span></h2><p>Photography, videography and creative services for your special occasions.</p></div>
       <div class="services-grid">
-        <a class="service-card" href="https://wa.me/919881584161?text=I%20am%20interested%20in%20Wedding%20Album%20Design." target="_blank" rel="noopener"><span class="service-icon">📖</span><span><h3>Wedding Album Design</h3><p>Albums and package options</p></span><span class="service-arrow">➜</span></a>
-        <a class="service-card" href="https://wa.me/919881584161?text=I%20am%20interested%20in%20Candid%20Photo%20Shoot." target="_blank" rel="noopener"><span class="service-icon">📸</span><span><h3>Candid Photo Shoot</h3><p>Natural moments and emotions</p></span><span class="service-arrow">➜</span></a>
-        <a class="service-card" href="https://wa.me/919881584161?text=I%20am%20interested%20in%20Traditional%20Photo%20Shoot." target="_blank" rel="noopener"><span class="service-icon">👰</span><span><h3>Traditional Photo Shoot</h3><p>Classic event photography</p></span><span class="service-arrow">➜</span></a>
-        <a class="service-card" href="https://wa.me/919881584161?text=I%20am%20interested%20in%20Traditional%20Video%20Shoot." target="_blank" rel="noopener"><span class="service-icon">🎥</span><span><h3>Traditional Video Shoot</h3><p>Event video coverage</p></span><span class="service-arrow">➜</span></a>
-        <a class="service-card" href="https://wa.me/919881584161?text=I%20am%20interested%20in%20Cinematic%20Films." target="_blank" rel="noopener"><span class="service-icon">🎬</span><span><h3>Cinematic Video / Photo Films</h3><p>Story-led cinematic edits</p></span><span class="service-arrow">➜</span></a>
-        <a class="service-card" href="https://wa.me/919881584161?text=I%20am%20interested%20in%20Drone%20Photo%20and%20Video%20Shoot." target="_blank" rel="noopener"><span class="service-icon">✈️</span><span><h3>Drone Photo + Video Shoot</h3><p>Aerial coverage, where permitted</p></span><span class="service-arrow">➜</span></a>
-        <a class="service-card" href="https://wa.me/919881584161?text=I%20am%20interested%20in%20Pre-Wedding%20Photo%20and%20Video%20Shoot." target="_blank" rel="noopener"><span class="service-icon">💞</span><span><h3>Pre-Wedding Photo + Video Shoot</h3><p>Creative couple stories</p></span><span class="service-arrow">➜</span></a>
-        <a class="service-card" href="https://wa.me/919881584161?text=I%20am%20interested%20in%20Pre-Wedding%20Films." target="_blank" rel="noopener"><span class="service-icon">💍</span><span><h3>Pre-Wedding Films</h3><p>Cinematic package options</p></span><span class="service-arrow">➜</span></a>
-        <a class="service-card" href="https://wa.me/919881584161?text=I%20am%20interested%20in%20Birthday%20Shoot." target="_blank" rel="noopener"><span class="service-icon">🎂</span><span><h3>Birthday Shoot</h3><p>Celebrations and portraits</p></span><span class="service-arrow">➜</span></a>
-        <a class="service-card" href="https://wa.me/919881584161?text=I%20am%20interested%20in%20School%20and%20College%20Events." target="_blank" rel="noopener"><span class="service-icon">🎓</span><span><h3>School & College Events</h3><p>Functions and celebrations</p></span><span class="service-arrow">➜</span></a>
-        <a class="service-card" href="https://wa.me/919881584161?text=I%20am%20interested%20in%20Photo%20Editing%20and%20Retouching." target="_blank" rel="noopener"><span class="service-icon">🖼️</span><span><h3>Photo Editing & Retouching</h3><p>Careful finishing and edits</p></span><span class="service-arrow">➜</span></a>
-        <a class="service-card" href="https://wa.me/919881584161?text=I%20am%20interested%20in%20Digital%20Photo%20and%20Video%20Delivery." target="_blank" rel="noopener"><span class="service-icon">☁️</span><span><h3>Digital Photo & Video Delivery</h3><p>Digital media delivery</p></span><span class="service-arrow">➜</span></a>
+        <article class="service-card"><span class="service-icon">▤</span><span><h3>Wedding Album Design</h3><p>Album design and package options</p></span></article>
+        <article class="service-card"><span class="service-icon">◉</span><span><h3>Candid Photo Shoot</h3><p>Natural moments and emotions</p></span></article>
+        <article class="service-card"><span class="service-icon">♧</span><span><h3>Traditional Photo Shoot</h3><p>Classic event photography</p></span></article>
+        <article class="service-card"><span class="service-icon">▣</span><span><h3>Traditional Video Shoot</h3><p>Event video coverage</p></span></article>
+        <article class="service-card"><span class="service-icon">▶</span><span><h3>Cinematic Video / Photo Films</h3><p>Creative visual storytelling</p></span></article>
+        <article class="service-card"><span class="service-icon">✧</span><span><h3>Drone Photo + Video Shoot</h3><p>Aerial coverage, where permitted</p></span></article>
+        <article class="service-card"><span class="service-icon">♡</span><span><h3>Pre-Wedding Photo + Video Shoot</h3><p>Creative couple stories</p></span></article>
+        <article class="service-card"><span class="service-icon">◇</span><span><h3>Pre-Wedding Films</h3><p>Cinematic film packages</p></span></article>
+        <article class="service-card"><span class="service-icon">☆</span><span><h3>Birthday Shoot</h3><p>Celebrations and portraits</p></span></article>
+        <article class="service-card"><span class="service-icon">▦</span><span><h3>School & College Events</h3><p>Functions and celebrations</p></span></article>
+        <article class="service-card"><span class="service-icon">✎</span><span><h3>Photo Editing & Retouching</h3><p>Careful finishing and edits</p></span></article>
+        <article class="service-card"><span class="service-icon">⇩</span><span><h3>Digital Photo & Video Delivery</h3><p>Digital media delivery</p></span></article>
       </div>
-      <p class="service-note">Pricing: To be confirmed. Contact the studio for a quotation.</p>
+      <p class="service-note">Service selection and enquiry are available on the separate Book a Shoot page. Pricing: To be confirmed.</p>
+    </section>
+
+    <section class="latest-section" id="latest-wedding">
+      <div class="section-head"><span class="eyebrow">Fresh from the Studio</span><h2>Latest <span class="gold">Wedding Photos</span></h2><p>Photos assigned today's shoot date by the studio owner appear in this latest folder.</p><span class="latest-date" id="latest-date-label">Today's Wedding Folder</span></div>
+      <div class="gallery-grid" id="latest-wedding-grid" aria-live="polite"><div class="empty-state">Today's wedding photos will appear here when the studio uploads them.</div></div>
     </section>
 
     <section class="gallery-section" id="gallery">
-      <div class="section-head"><span class="eyebrow">Our Gallery</span><h2>Explore Our <span class="gold">Moments</span></h2><p>Browse wedding, events and pre-wedding photographs and films.</p></div>
+      <div class="section-head"><span class="eyebrow">Our Gallery</span><h2>Explore Our <span class="gold">Moments</span></h2><p>Browse studio photographs and videos by media type and event category.</p></div>
       <div class="gallery-controls">
-        <div class="filter-row" id="type-filters"><button class="filter-btn active" data-type="all">Events</button><button class="filter-btn" data-type="image">Photos</button><button class="filter-btn" data-type="video">Videos</button></div>
+        <div class="filter-row" id="type-filters"><button class="filter-btn active" data-type="all">All Media</button><button class="filter-btn" data-type="image">Photos</button><button class="filter-btn" data-type="video">Videos</button></div>
         <div class="filter-row" id="category-filters"><button class="filter-btn active" data-category="All">All</button><button class="filter-btn" data-category="Wedding">Wedding</button><button class="filter-btn" data-category="Events">Events</button><button class="filter-btn" data-category="Pre-Wedding">Pre-Wedding</button></div>
       </div>
       <div class="gallery-grid" id="public-gallery" aria-live="polite"></div>
-      <p class="gallery-foot">New photos and videos added by the studio will appear here.</p>
-    </section>
-
-    <section id="films">
-      <div class="section-head"><span class="eyebrow">Moving Memories</span><h2>Our <span class="gold">Films</span></h2><p>Selected cinematic work and event films.</p></div>
-      <div class="films-strip"><article class="film-tile"><b>Wedding Films</b><p>Relive meaningful wedding moments.</p></article><article class="film-tile"><b>Cinematic Films</b><p>Creative storytelling through film.</p></article><article class="film-tile"><b>Pre-Wedding Films</b><p>Couple stories captured with care.</p></article></div>
+      <p class="gallery-foot">The title shown below each photo or video is the name saved by the studio owner.</p>
     </section>
 
     <section id="contact">
       <div class="section-head"><span class="eyebrow">Get in Touch</span><h2>Contact <span class="gold">Us</span></h2><p>For bookings, enquiries or questions, contact Sanjay Photo Studio & Films.</p></div>
-      <div class="contact-card"><div><h3>Let's Create <span class="gold">Memories.</span></h3><p>Tell us about your event and the service you are looking for. We will continue the enquiry on WhatsApp.</p><div class="contact-actions"><a class="btn btn-primary" href="tel:+919881584161">☎ Call Us</a><a class="btn btn-outline" href="https://wa.me/919881584161" target="_blank" rel="noopener">WhatsApp</a></div></div><div class="contact-info"><div class="contact-line"><span>☎</span><span>+91 98815 84161</span></div><div class="contact-line"><span>◉</span><span>WhatsApp enquiries available</span></div><div class="contact-line"><span>⌖</span><span>Studio address will be added after confirmation</span></div><div class="contact-line"><span>✉</span><span>Email details will be added after confirmation</span></div></div></div>
+      <div class="contact-card"><div><h3>Let's Create <span class="gold">Memories.</span></h3><p>Share your event details through the booking page, or contact the studio directly.</p><div class="contact-actions"><a class="btn btn-primary" href="tel:+919881584161">Call Us</a><a class="btn btn-outline" href="https://wa.me/919881584161" target="_blank" rel="noopener noreferrer">WhatsApp</a><a class="btn btn-outline" href="booking.html">Book a Shoot</a></div></div><div class="contact-info"><div class="contact-line"><span>☎</span><span>+91 98815 84161</span></div><div class="contact-line"><span>◉</span><span>WhatsApp enquiries available</span></div><div class="contact-line"><span>⌖</span><span>Studio address will be added after confirmation</span></div><div class="contact-line"><span>✉</span><span>Email details will be added after confirmation</span></div></div></div>
     </section>
   </main>
 
   <footer class="footer">© 2026 Sanjay Photo Studio & Films · Capturing Moments. Creating Memories.</footer>
-  <nav class="bottom-nav" aria-label="Mobile navigation"><a href="#home" class="active"><span class="nav-ico">⌂</span><span>Home</span></a><a href="#about"><span class="nav-ico">◎</span><span>About</span></a><a href="#services"><span class="nav-ico">▣</span><span>Services</span></a><a href="#gallery"><span class="nav-ico">▧</span><span>Gallery</span></a><a href="#contact"><span class="nav-ico">♧</span><span>Contact</span></a></nav>
+  <nav class="bottom-nav" aria-label="Mobile navigation"><a href="#home" class="active"><span class="nav-ico">⌂</span><span>Home</span></a><a href="#about"><span class="nav-ico">◉</span><span>About</span></a><a href="#services"><span class="nav-ico">▣</span><span>Services</span></a><a href="#gallery"><span class="nav-ico">▧</span><span>Gallery</span></a><a href="#contact"><span class="nav-ico">♧</span><span>Contact</span></a></nav>
 
   <div class="modal-backdrop" id="viewer-modal" role="dialog" aria-modal="true" aria-label="Media viewer"><div class="viewer"><button class="modal-close" id="viewer-close" aria-label="Close">×</button><div id="viewer-content"></div></div></div>
 
@@ -113,18 +109,18 @@ tem h4{font-size:12px;margin-bottom:4px;overflow-wrap:anywhere}.admin-media-item
       <div class="admin-top"><div><span class="eyebrow">Private Owner Area</span><h2>Sanjay Studio Admin</h2><p>Media upload and gallery management</p></div><button class="admin-close" id="close-admin">Close ✕</button></div>
       <div class="admin-panel" id="admin-login-panel"><h3>Owner Login</h3><p>Sign in with the configured owner Google account to manage studio media.</p><div class="admin-login"><button class="btn btn-primary" id="google-login">Continue with Google</button><button class="btn btn-outline hidden" id="google-logout">Sign out</button></div><div class="status" id="auth-status" role="status"></div></div>
       <div id="admin-content" class="hidden">
-        <div class="admin-panel"><h3>Add Photos / Videos</h3><p>Choose a category, select media from your device, then upload it to Cloudinary. Published media appears in the public gallery.</p>
+        <div class="admin-panel"><h3>Add Photos / Videos</h3><p>Choose a category, media type and the date the photos or video were captured. Add the display name that visitors will see under each item.</p>
           <form id="upload-form" class="admin-form">
             <div class="field"><label for="upload-category">Category</label><select id="upload-category" required><option>Wedding</option><option>Events</option><option>Pre-Wedding</option></select></div>
             <div class="field"><label for="upload-type">Media type</label><select id="upload-type" required><option value="image">Photos</option><option value="video">Videos</option></select></div>
+            <div class="field"><label for="shoot-date">Shoot / capture date</label><input id="shoot-date" type="date" required></div>
+            <div class="field"><label for="media-title">Display name</label><input id="media-title" type="text" maxlength="90" placeholder="Example: Riya & Amit Wedding" required></div>
             <div class="field full"><label for="media-files">Select files</label><input id="media-files" type="file" accept="image/jpeg,image/png,image/webp" multiple required></div>
-            <div class="field full"><label for="media-title">Display title (optional)</label><input id="media-title" type="text" maxlength="90" placeholder="Example: Wedding highlights"></div>
             <div class="field full"><label><input type="checkbox" id="publish-media" checked> Publish these files in the public gallery</label></div>
             <div class="field full"><button class="btn btn-primary" id="upload-submit" type="submit">Upload Selected Media</button><div class="progress-wrap" id="upload-progress"><div class="progress-bar" id="upload-progress-bar"></div></div><div class="status" id="upload-status" role="status"></div></div>
           </form>
         </div>
-        <div class="admin-panel"><h3>Manage Uploaded Media</h3><p>Edit the title, hide/show an item in the public gallery, or permanently delete it from Cloudinary and the media list.</p><div class="admin-actions"><button class="btn btn-outline" id="refresh-media">↻ Refresh Media</button></div><div class="status" id="manage-status" role="status"></div><div class="admin-media-list" id="admin-media-list"></div></div>
-        <div class="admin-panel"><h3>Legacy Gallery Photos</h3><p>The older photos written directly into the HTML will remain visible until you upload them through this new manager. Only newly uploaded Cloudinary items can be edited or deleted here.</p></div>
+        <div class="admin-panel"><h3>Manage Uploaded Media</h3><p>Edit the display name, hide/show an item in the public gallery, or permanently delete it from Cloudinary and the media list.</p><div class="admin-actions"><button class="btn btn-outline" id="refresh-media">Refresh Media</button></div><div class="status" id="manage-status" role="status"></div><div class="admin-media-list" id="admin-media-list"></div></div>
       </div>
     </div>
   </div>
@@ -135,188 +131,68 @@ tem h4{font-size:12px;margin-bottom:4px;overflow-wrap:anywhere}.admin-media-item
     import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/11.0.0/firebase-auth.js';
     import { getFirestore, collection, getDocs, addDoc, doc, updateDoc, deleteDoc, serverTimestamp, query, where } from 'https://www.gstatic.com/firebasejs/11.0.0/firebase-firestore.js';
 
-    const firebaseConfig = {
-      apiKey: 'AIzaSyAxzXdINs2QC8Evft_CC8uXpJwnlBGynTo',
-      authDomain: 'sanjay-photo-studio.firebaseapp.com',
-      projectId: 'sanjay-photo-studio',
-      storageBucket: 'sanjay-photo-studio.firebasestorage.app',
-      messagingSenderId: '225740647964',
-      appId: '1:225740647964:web:05c2b77fdaec7af930b9d9'
-    };
+    const firebaseConfig = {apiKey:'AIzaSyAxzXdINs2QC8Evft_CC8uXpJwnlBGynTo',authDomain:'sanjay-photo-studio.firebaseapp.com',projectId:'sanjay-photo-studio',storageBucket:'sanjay-photo-studio.firebasestorage.app',messagingSenderId:'225740647964',appId:'1:225740647964:web:05c2b77fdaec7af930b9d9'};
     const OWNER_EMAIL = 'piyushsawant7541@gmail.com';
     const WORKER_URL = 'https://sanjay-studio-uplode.piyushsawant7541.workers.dev';
-    const app = initializeApp(firebaseConfig);
-    const auth = getAuth(app);
-    const db = getFirestore(app);
-    const provider = new GoogleAuthProvider();
-
-    const legacyMedia = [
-      {id:'legacy-cloudinary-wedding',title:'Wedding Photography',category:'Wedding',categories:['Wedding'],mediaType:'image',url:'https://res.cloudinary.com/xjawnbom/image/upload/v1792916187/file_00000000272082099da7c2e84b89c114.png',published:true,legacy:true},
-      {id:'legacy-1',title:'Studio Photography',category:'Wedding',categories:['Wedding'],mediaType:'image',url:'IMG_20260806_205022.png',published:true,legacy:true},
-      {id:'legacy-2',title:'Events & Celebrations',category:'Events',categories:['Events'],mediaType:'image',url:'IMG_20260819_224235.png',published:true,legacy:true},
-      {id:'legacy-3',title:'Pre-Wedding Memories',category:'Pre-Wedding',categories:['Pre-Wedding'],mediaType:'image',url:'IMG_20260819_224555.jpg',published:true,legacy:true},
-      {id:'legacy-4',title:'Wedding Moments',category:'Wedding',categories:['Wedding'],mediaType:'image',url:'IMG_20260819_224612.jpg',published:true,legacy:true},
-      {id:'legacy-5',title:'Pre-Wedding Events',category:'Pre-Wedding',categories:['Pre-Wedding','Events'],mediaType:'image',url:'IMG_20260819_224635.jpg',published:true,legacy:true}
+    const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getFirestore(app),provider=new GoogleAuthProvider();
+    const legacyMedia=[
+      {id:'legacy-cloudinary-wedding',title:'Wedding Photography',category:'Wedding',categories:['Wedding'],mediaType:'image',url:'https://res.cloudinary.com/xjawnbom/image/upload/v1792916187/file_00000000272082099da7c2e84b89c114.png',published:true,legacy:true,shootDate:''},
+      {id:'legacy-1',title:'Studio Photography',category:'Wedding',categories:['Wedding'],mediaType:'image',url:'IMG_20260806_205022.png',published:true,legacy:true,shootDate:''},
+      {id:'legacy-2',title:'Events & Celebrations',category:'Events',categories:['Events'],mediaType:'image',url:'IMG_20260819_224235.png',published:true,legacy:true,shootDate:''},
+      {id:'legacy-3',title:'Pre-Wedding Memories',category:'Pre-Wedding',categories:['Pre-Wedding'],mediaType:'image',url:'IMG_20260819_224555.jpg',published:true,legacy:true,shootDate:''},
+      {id:'legacy-4',title:'Wedding Moments',category:'Wedding',categories:['Wedding'],mediaType:'image',url:'IMG_20260819_224612.jpg',published:true,legacy:true,shootDate:''},
+      {id:'legacy-5',title:'Pre-Wedding Events',category:'Pre-Wedding',categories:['Pre-Wedding','Events'],mediaType:'image',url:'IMG_20260819_224635.jpg',published:true,legacy:true,shootDate:''}
     ];
-    let cloudMedia = [];
-    let currentUser = null;
-    let isOwner = false;
-    let selectedType = 'all';
-    let selectedCategory = 'All';
-    let databaseReady = false;
+    let cloudMedia=[],isOwner=false,selectedType='all',selectedCategory='All',databaseReady=false;
+    const $=id=>document.getElementById(id);
+    const escapeHTML=(value='')=>String(value).replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+    const setStatus=(id,message,kind='')=>{const el=$(id);el.textContent=message;el.className='status'+(kind?' '+kind:'');};
+    const toast=message=>{const el=$('toast');el.textContent=message;el.classList.add('show');setTimeout(()=>el.classList.remove('show'),3000);};
+    const isOwnerEmail=user=>Boolean(user?.email&&user.email.toLowerCase()===OWNER_EMAIL.toLowerCase());
+    const getToken=async()=>{if(!auth.currentUser)throw new Error('Please sign in again.');return auth.currentUser.getIdToken();};
+    const todayIndia=()=>{const p=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Kolkata',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());const v=Object.fromEntries(p.map(x=>[x.type,x.value]));return `${v.year}-${v.month}-${v.day}`;};
+    const formatShootDate=value=>{if(!value)return 'Date not added';const d=new Date(`${value}T00:00:00+05:30`);return Number.isNaN(d.getTime())?value:new Intl.DateTimeFormat('en-IN',{day:'numeric',month:'short',year:'numeric',timeZone:'Asia/Kolkata'}).format(d);};
 
-    const $ = (id) => document.getElementById(id);
-    const toast = (message) => { const el=$('toast'); el.textContent=message; el.classList.add('show'); window.setTimeout(()=>el.classList.remove('show'),3200); };
-    const setStatus = (id,message,kind='') => { const el=$(id); el.textContent=message; el.className='status'+(kind?' '+kind:''); };
-    const escapeHTML = (value='') => String(value).replace(/[&<>"']/g, ch => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
-    const isOwnerEmail = (user) => Boolean(user?.email && user.email.toLowerCase() === OWNER_EMAIL.toLowerCase());
-    const getToken = async () => { if(!auth.currentUser) throw new Error('Please sign in again.'); return auth.currentUser.getIdToken(); };
+    async function workerRequest(path,body){const token=await getToken();const response=await fetch(WORKER_URL+path,{method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+token},body:JSON.stringify(body)});const data=await response.json().catch(()=>({error:'Worker returned an unreadable response.'}));if(!response.ok)throw new Error(data.error||`Backend error (${response.status})`);return data;}
 
-    async function workerRequest(path, body) {
-      const token = await getToken();
-      const response = await fetch(WORKER_URL + path, {method:'POST',headers:{'Content-Type':'application/json','Authorization':'Bearer '+token},body:JSON.stringify(body)});
-      const data = await response.json().catch(()=>({error:'Worker returned an unreadable response.'}));
-      if(!response.ok) throw new Error(data.error || `Backend error (${response.status})`);
-      return data;
+    function createMediaCard(item){
+      const card=document.createElement('button');card.type='button';card.className='media-card';card.setAttribute('aria-label','Open '+(item.title||'gallery media'));
+      const wrap=document.createElement('span');wrap.className='media-image-wrap';const img=document.createElement('img');img.src=item.thumbnailUrl||item.url;img.alt=item.title||'Studio media';img.loading='lazy';wrap.appendChild(img);
+      if(item.mediaType==='video'){const badge=document.createElement('span');badge.className='video-badge';badge.textContent='VIDEO';wrap.appendChild(badge);}
+      const caption=document.createElement('span');caption.className='media-caption';const title=document.createElement('strong');title.textContent=item.title||'Sanjay Photo Studio';const meta=document.createElement('small');meta.textContent=`${item.category||'Studio'} · ${formatShootDate(item.shootDate)}`;caption.append(title,meta);card.append(wrap,caption);card.addEventListener('click',()=>openViewer(item));return card;
     }
+    function renderGallery(){const grid=$('public-gallery');const items=[...legacyMedia,...cloudMedia].filter(x=>x.published!==false);const filtered=items.filter(item=>(selectedType==='all'||item.mediaType===selectedType)&&((item.categories||[item.category]).includes(selectedCategory)||selectedCategory==='All'));grid.innerHTML='';if(!filtered.length){grid.innerHTML='<div class="empty-state">No media is available in this category yet.</div>';return;}filtered.sort((a,b)=>(b.createdAt?.seconds||0)-(a.createdAt?.seconds||0));filtered.forEach(item=>grid.appendChild(createMediaCard(item)));}
+    function renderLatestWedding(){const grid=$('latest-wedding-grid');const today=todayIndia();$('latest-date-label').textContent='Shoot date: '+formatShootDate(today);const latest=cloudMedia.filter(x=>x.published!==false&&x.category==='Wedding'&&x.mediaType==='image'&&x.shootDate===today).sort((a,b)=>(b.createdAt?.seconds||0)-(a.createdAt?.seconds||0));grid.innerHTML='';if(!latest.length){grid.innerHTML='<div class="empty-state">No Wedding photos have been added for today yet. When the owner uploads photos and selects today’s shoot date, they will appear in this folder.</div>';return;}latest.forEach(item=>grid.appendChild(createMediaCard(item)));}
+    function openViewer(item){const content=$('viewer-content');content.innerHTML='';if(item.mediaType==='video'){const video=document.createElement('video');video.src=item.url;video.controls=true;video.autoplay=true;video.playsInline=true;content.appendChild(video);}else{const img=document.createElement('img');img.src=item.url;img.alt=item.title||'Studio photograph';content.appendChild(img);}$('viewer-modal').classList.add('open');}
+    function closeViewer(){$('viewer-modal').classList.remove('open');$('viewer-content').innerHTML='';}
 
-    function renderGallery() {
-      const grid = $('public-gallery');
-      const items = [...legacyMedia, ...cloudMedia].filter(item => item.published !== false);
-      const filtered = items.filter(item => {
-        const typeOK = selectedType === 'all' || item.mediaType === selectedType;
-        const cats = item.categories || [item.category];
-        const catOK = selectedCategory === 'All' || cats.includes(selectedCategory);
-        return typeOK && catOK;
-      });
-      grid.innerHTML = '';
-      if(!filtered.length){ grid.innerHTML='<div class="empty-state">No media in this category yet. New studio uploads will appear here.</div>'; return; }
-      for(const item of filtered){
-        const card=document.createElement('button'); card.type='button'; card.className='media-card'; card.setAttribute('aria-label','Open '+(item.title||'gallery media'));
-        const thumb=item.thumbnailUrl || item.url;
-        const mediaEl=item.mediaType==='video' ? `<img src="${escapeHTML(thumb)}" alt="${escapeHTML(item.title||'Video thumbnail')}" loading="lazy">` : `<img src="${escapeHTML(thumb)}" alt="${escapeHTML(item.title||'Studio photograph')}" loading="lazy">`;
-        card.innerHTML=mediaEl+`<span class="media-overlay">${escapeHTML(item.title||item.category||'Sanjay Studio')}</span>${item.mediaType==='video'?'<span class="video-badge">▶ VIDEO</span>':''}`;
-        card.addEventListener('click',()=>openViewer(item)); grid.appendChild(card);
-      }
-    }
+    async function refreshMedia(){try{const mediaQuery=isOwner?collection(db,'media'):query(collection(db,'media'),where('published','==',true));const snapshot=await getDocs(mediaQuery);cloudMedia=snapshot.docs.map(d=>({id:d.id,...d.data(),legacy:false}));cloudMedia.sort((a,b)=>(b.createdAt?.seconds||0)-(a.createdAt?.seconds||0));databaseReady=true;renderGallery();renderLatestWedding();if(isOwner)renderAdminMedia();if($('manage-status'))setStatus('manage-status',`Loaded ${cloudMedia.length} uploaded media record(s).`,'success');}catch(error){databaseReady=false;renderGallery();renderLatestWedding();if(isOwner)setStatus('manage-status','Firestore is not ready or its rules need setup. Create the database and publish the supplied rules. Details: '+error.message,'error');console.warn('Media list unavailable:',error);}}
 
-    function openViewer(item){
-      const content=$('viewer-content'); content.innerHTML='';
-      if(item.mediaType==='video'){
-        const video=document.createElement('video'); video.src=item.url; video.controls=true; video.autoplay=true; video.playsInline=true; video.style.maxWidth='100%'; video.style.maxHeight='82dvh'; content.appendChild(video);
-      } else {
-        const img=document.createElement('img'); img.src=item.url; img.alt=item.title||'Studio photograph'; content.appendChild(img);
-      }
-      $('viewer-modal').classList.add('open');
-    }
-    function closeViewer(){ $('viewer-modal').classList.remove('open'); $('viewer-content').innerHTML=''; }
-
-    async function refreshMedia(){
-      try{
-        const mediaQuery = isOwner ? collection(db,'media') : query(collection(db,'media'),where('published','==',true));
-        const snapshot=await getDocs(mediaQuery);
-        cloudMedia=snapshot.docs.map(d=>({id:d.id,...d.data(),legacy:false}));
-        cloudMedia.sort((a,b)=> (b.createdAt?.seconds||0)-(a.createdAt?.seconds||0));
-        databaseReady=true;
-        renderGallery();
-        if(isOwner) renderAdminMedia();
-        setStatus('manage-status',`Loaded ${cloudMedia.length} Cloudinary media record(s).`,'success');
-      }catch(error){
-        databaseReady=false;
-        renderGallery();
-        if(isOwner) setStatus('manage-status','Firestore is not ready or its rules need setup. Create the database and publish the supplied firestore.rules file. Details: '+error.message,'error');
-        console.warn('Media list unavailable:',error);
-      }
-    }
-
-    function openAdmin(){ $('admin-backdrop').classList.add('open'); document.body.style.overflow='hidden'; }
-    function closeAdmin(){ $('admin-backdrop').classList.remove('open'); document.body.style.overflow=''; }
-    $('open-admin').addEventListener('click',openAdmin);
-    $('close-admin').addEventListener('click',closeAdmin);
-    $('viewer-close').addEventListener('click',closeViewer);
-    $('viewer-modal').addEventListener('click',e=>{if(e.target===$('viewer-modal')) closeViewer();});
-    $('admin-backdrop').addEventListener('click',e=>{if(e.target===$('admin-backdrop')) closeAdmin();});
-    document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeViewer();closeAdmin();}});
-
-    $('google-login').addEventListener('click',async()=>{
-      try{setStatus('auth-status','Opening Google sign-in…'); const result=await signInWithPopup(auth,provider); if(!isOwnerEmail(result.user)){await signOut(auth);throw new Error('This Google account is not the configured studio owner account.');} setStatus('auth-status','Owner sign-in successful.','success');}
-      catch(error){setStatus('auth-status',error.message||'Sign-in failed.','error');}
-    });
+    function openAdmin(){$('admin-backdrop').classList.add('open');document.body.style.overflow='hidden';}
+    function closeAdmin(){$('admin-backdrop').classList.remove('open');document.body.style.overflow='';}
+    $('open-admin').addEventListener('click',openAdmin);$('close-admin').addEventListener('click',closeAdmin);$('viewer-close').addEventListener('click',closeViewer);$('viewer-modal').addEventListener('click',e=>{if(e.target===$('viewer-modal'))closeViewer();});$('admin-backdrop').addEventListener('click',e=>{if(e.target===$('admin-backdrop'))closeAdmin();});document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeViewer();closeAdmin();}});
+    $('google-login').addEventListener('click',async()=>{try{setStatus('auth-status','Opening Google sign-in…');const result=await signInWithPopup(auth,provider);if(!isOwnerEmail(result.user)){await signOut(auth);throw new Error('This Google account is not configured as the studio owner.');}setStatus('auth-status','Owner sign-in successful.','success');}catch(error){setStatus('auth-status',error.message||'Sign-in failed.','error');}});
     $('google-logout').addEventListener('click',async()=>{await signOut(auth);setStatus('auth-status','Signed out.');});
+    onAuthStateChanged(auth,async user=>{isOwner=isOwnerEmail(user);$('admin-content').classList.toggle('hidden',!isOwner);$('google-login').classList.toggle('hidden',isOwner);$('google-logout').classList.toggle('hidden',!isOwner);if(isOwner){setStatus('auth-status','Signed in as the configured owner.','success');await refreshMedia();}else{setStatus('auth-status','Sign in with the configured owner Google account to manage media.');await refreshMedia();}});
 
-    onAuthStateChanged(auth,async user=>{
-      currentUser=user; isOwner=isOwnerEmail(user);
-      $('admin-content').classList.toggle('hidden',!isOwner);
-      $('google-login').classList.toggle('hidden',isOwner);
-      $('google-logout').classList.toggle('hidden',!isOwner);
-      if(isOwner){setStatus('auth-status','Signed in as the configured owner.','success'); await refreshMedia();}
-      else {setStatus('auth-status','Sign in with the configured owner Google account to manage media.'); await refreshMedia();}
-    });
-
-    $('upload-type').addEventListener('change',()=>{
-      $('media-files').value='';
-      $('media-files').accept=$('upload-type').value==='image'?'image/jpeg,image/png,image/webp':'video/mp4,video/webm,video/quicktime';
-    });
+    $('shoot-date').value=todayIndia();
+    $('upload-type').addEventListener('change',()=>{$('media-files').value='';$('media-files').accept=$('upload-type').value==='image'?'image/jpeg,image/png,image/webp':'video/mp4,video/webm,video/quicktime';});
     $('upload-form').addEventListener('submit',async event=>{
-      event.preventDefault();
-      if(!isOwner || !auth.currentUser){setStatus('upload-status','Owner sign-in required.','error');return;}
-      if(!databaseReady){setStatus('upload-status','Firestore database is not ready. Create Firestore and publish firestore.rules before uploading.','error');return;}
-      const files=[...$('media-files').files]; if(!files.length){setStatus('upload-status','Select at least one file.','error');return;}
-      const category=$('upload-category').value; const mediaType=$('upload-type').value; const titleBase=$('media-title').value.trim(); const published=$('publish-media').checked;
-      const maxBytes=mediaType==='image'?15*1024*1024:100*1024*1024;
-      for(const file of files){
-        if(mediaType==='image'&&!['image/jpeg','image/png','image/webp'].includes(file.type)){setStatus('upload-status',`${file.name}: choose JPG, PNG or WebP images only.`,'error');return;}
-        if(mediaType==='video'&&!['video/mp4','video/webm','video/quicktime'].includes(file.type)){setStatus('upload-status',`${file.name}: choose MP4, WebM or MOV videos only.`,'error');return;}
-        if(file.size>maxBytes){setStatus('upload-status',`${file.name}: file is larger than the current ${mediaType==='image'?'15 MB':'100 MB'} browser limit. Check your Cloudinary plan limits.`,'error');return;}
-      }
-      $('upload-submit').disabled=true; $('upload-progress').style.display='block'; $('upload-progress-bar').style.width='0%';
-      let completed=0;
-      try{
-        for(const file of files){
-          setStatus('upload-status',`Preparing secure upload: ${file.name}`);
-          const signed=await workerRequest('/sign-upload',{category,resourceType:mediaType});
-          const form=new FormData(); form.append('file',file); form.append('api_key',signed.apiKey); form.append('timestamp',String(signed.timestamp)); form.append('signature',signed.signature); form.append('upload_preset',signed.uploadPreset); form.append('asset_folder',signed.assetFolder);
-          const endpoint=`https://api.cloudinary.com/v1_1/${encodeURIComponent(signed.cloudName)}/${mediaType}/upload`;
-          const uploadResponse=await fetch(endpoint,{method:'POST',body:form}); const asset=await uploadResponse.json();
-          if(!uploadResponse.ok) throw new Error(asset.error?.message||`Cloudinary upload failed for ${file.name}`);
-          const thumb=mediaType==='video'?asset.secure_url.replace('/upload/','/upload/so_0,f_jpg,q_auto,w_640/').replace(/\.[^/.]+$/i,'.jpg'):asset.secure_url;
-          await addDoc(collection(db,'media'),{title:titleBase||file.name.replace(/\.[^.]+$/,''),category,mediaType,resourceType:asset.resource_type,publicId:asset.public_id,url:asset.secure_url,thumbnailUrl:thumb,format:asset.format||'',width:asset.width||0,height:asset.height||0,duration:asset.duration||0,bytes:asset.bytes||file.size,published,createdAt:serverTimestamp(),createdBy:auth.currentUser.uid});
-          completed++; $('upload-progress-bar').style.width=`${Math.round(completed/files.length*100)}%`; setStatus('upload-status',`Uploaded ${completed} of ${files.length}: ${file.name}`,'success');
-        }
-        $('upload-form').reset(); $('media-files').accept='image/jpeg,image/png,image/webp'; await refreshMedia(); setStatus('upload-status',`Success: ${completed} file(s) uploaded and added to the gallery.`,'success'); toast('Media uploaded successfully.');
-      }catch(error){setStatus('upload-status',error.message||'Upload failed. Check Worker configuration, Cloudinary settings and Firestore rules.','error');}
-      finally{$('upload-submit').disabled=false;}
+      event.preventDefault();if(!isOwner||!auth.currentUser){setStatus('upload-status','Owner sign-in required.','error');return;}if(!databaseReady){setStatus('upload-status','Firestore is not ready. Create the database and publish firestore.rules before uploading.','error');return;}
+      const files=[...$('media-files').files],category=$('upload-category').value,mediaType=$('upload-type').value,titleBase=$('media-title').value.trim(),shootDate=$('shoot-date').value,published=$('publish-media').checked;
+      if(!files.length||!titleBase||!shootDate){setStatus('upload-status','Enter a display name, shoot date and select at least one file.','error');return;}
+      const maxBytes=mediaType==='image'?15*1024*1024:100*1024*1024;for(const file of files){if(mediaType==='image'&&!['image/jpeg','image/png','image/webp'].includes(file.type)){setStatus('upload-status',`${file.name}: choose JPG, PNG or WebP images only.`,'error');return;}if(mediaType==='video'&&!['video/mp4','video/webm','video/quicktime'].includes(file.type)){setStatus('upload-status',`${file.name}: choose MP4, WebM or MOV videos only.`,'error');return;}if(file.size>maxBytes){setStatus('upload-status',`${file.name}: file is larger than the current ${mediaType==='image'?'15 MB':'100 MB'} browser limit.`,'error');return;}}
+      $('upload-submit').disabled=true;$('upload-progress').style.display='block';$('upload-progress-bar').style.width='0%';let completed=0;
+      try{for(const file of files){setStatus('upload-status',`Preparing secure upload: ${file.name}`);const signed=await workerRequest('/sign-upload',{category,resourceType:mediaType});const form=new FormData();form.append('file',file);form.append('api_key',signed.apiKey);form.append('timestamp',String(signed.timestamp));form.append('signature',signed.signature);form.append('upload_preset',signed.uploadPreset);form.append('asset_folder',signed.assetFolder);const endpoint=`https://api.cloudinary.com/v1_1/${encodeURIComponent(signed.cloudName)}/${mediaType}/upload`;const uploadResponse=await fetch(endpoint,{method:'POST',body:form});const asset=await uploadResponse.json();if(!uploadResponse.ok)throw new Error(asset.error?.message||`Cloudinary upload failed for ${file.name}`);const thumb=mediaType==='video'?asset.secure_url.replace('/upload/','/upload/so_0,f_jpg,q_auto,w_640/').replace(/\.[^/.]+$/i,'.jpg'):asset.secure_url;const displayTitle=files.length===1?titleBase:`${titleBase} — ${file.name.replace(/\.[^.]+$/,'')}`;await addDoc(collection(db,'media'),{title:displayTitle,category,mediaType,resourceType:asset.resource_type,publicId:asset.public_id,url:asset.secure_url,thumbnailUrl:thumb,format:asset.format||'',width:asset.width||0,height:asset.height||0,duration:asset.duration||0,bytes:asset.bytes||file.size,published,shootDate,createdAt:serverTimestamp(),createdBy:auth.currentUser.uid});completed++;$('upload-progress-bar').style.width=`${Math.round(completed/files.length*100)}%`;setStatus('upload-status',`Uploaded ${completed} of ${files.length}: ${file.name}`,'success');} $('upload-form').reset();$('shoot-date').value=todayIndia();$('media-files').accept='image/jpeg,image/png,image/webp';await refreshMedia();setStatus('upload-status',`Success: ${completed} file(s) uploaded and added to the gallery.`,'success');toast('Media uploaded successfully.');}catch(error){setStatus('upload-status',error.message||'Upload failed. Check Worker, Cloudinary and Firestore configuration.','error');}finally{$('upload-submit').dis
+abled=false;}
     });
 
-    function renderAdminMedia(){
-      const list=$('admin-media-list'); list.innerHTML='';
-      if(!cloudMedia.length){list.innerHTML='<p class="empty-state">No uploads yet. Add your first photo or video above.</p>';return;}
-      for(const item of cloudMedia){
-        const card=document.createElement('article'); card.className='admin-media-item';
-        const thumb=escapeHTML(item.thumbnailUrl||item.url||'');
-        card.innerHTML=`<img src="${thumb}" alt="" loading="lazy"><div><h4>${escapeHTML(item.title||'Untitled media')}</h4><small>${escapeHTML(item.category||'')} · ${escapeHTML(item.mediaType||'')} · ${item.published?'Published':'Hidden'}</small><input type="text" maxlength="90" value="${escapeHTML(item.title||'')}" aria-label="Media title"><label style="font-size:10px;color:#bbb"><input type="checkbox" class="publish-toggle" ${item.published?'checked':''}> Show in public gallery</label><div><button class="small-btn save-item">Save</button><button class="small-btn danger delete-item">Delete</button></div></div>`;
-        card.querySelector('.save-item').addEventListener('click',async()=>{
-          try{const title=card.querySelector('input[type=text]').value.trim();const published=card.querySelector('.publish-toggle').checked;if(!title)throw new Error('Title cannot be empty.');await updateDoc(doc(db,'media',item.id),{title,published,updatedAt:serverTimestamp()});await refreshMedia();toast('Media details updated.');}
-          catch(error){setStatus('manage-status',error.message,'error');}
-        });
-        card.querySelector('.delete-item').addEventListener('click',async()=>{
-          if(!confirm(`Permanently delete “${item.title||'this media'}” from Cloudinary and the website?`))return;
-          try{setStatus('manage-status','Deleting Cloudinary asset…');await workerRequest('/delete-asset',{publicId:item.publicId,resourceType:item.resourceType});await deleteDoc(doc(db,'media',item.id));await refreshMedia();toast('Media deleted.');}
-          catch(error){setStatus('manage-status',error.message||'Delete failed.','error');}
-        });
-        list.appendChild(card);
-      }
-    }
+    function renderAdminMedia(){const list=$('admin-media-list');list.innerHTML='';if(!cloudMedia.length){list.innerHTML='<p class="empty-state">No uploads yet. Add your first photo or video above.</p>';return;}for(const item of cloudMedia){const card=document.createElement('article');card.className='admin-media-item';card.innerHTML=`<img src="${escapeHTML(item.thumbnailUrl||item.url||'')}" alt="" loading="lazy"><div><h4>${escapeHTML(item.title||'Untitled media')}</h4><small>${escapeHTML(item.category||'')} · ${escapeHTML(item.mediaType||'')} · ${formatShootDate(item.shootDate)} · ${item.published?'Published':'Hidden'}</small><input type="text" maxlength="90" value="${escapeHTML(item.title||'')}" aria-label="Media display name"><label style="font-size:10px;color:#555"><input type="checkbox" class="publish-toggle" ${item.published?'checked':''}> Show in public gallery</label><div><button class="small-btn save-item">Save</button><button class="small-btn danger delete-item">Delete</button></div></div>`;card.querySelector('.save-item').addEventListener('click',async()=>{try{const title=card.querySelector('input[type=text]').value.trim(),published=card.querySelector('.publish-toggle').checked;if(!title)throw new Error('Display name cannot be empty.');await updateDoc(doc(db,'media',item.id),{title,published,updatedAt:serverTimestamp()});await refreshMedia();toast('Media details updated.');}catch(error){setStatus('manage-status',error.message,'error');}});card.querySelector('.delete-item').addEventListener('click',async()=>{if(!confirm(`Permanently delete “${item.title||'this media'}” from Cloudinary and the website?`))return;try{setStatus('manage-status','Deleting Cloudinary asset…');await workerRequest('/delete-asset',{publicId:item.publicId,resourceType:item.resourceType});await deleteDoc(doc(db,'media',item.id));await refreshMedia();toast('Media deleted.');}catch(error){setStatus('manage-status',error.message||'Delete failed.','error');}});list.appendChild(card);}}
     $('refresh-media').addEventListener('click',refreshMedia);
-
     document.querySelectorAll('#type-filters .filter-btn').forEach(button=>button.addEventListener('click',()=>{selectedType=button.dataset.type;document.querySelectorAll('#type-filters .filter-btn').forEach(b=>b.classList.toggle('active',b===button));renderGallery();}));
     document.querySelectorAll('#category-filters .filter-btn').forEach(button=>button.addEventListener('click',()=>{selectedCategory=button.dataset.category;document.querySelectorAll('#category-filters .filter-btn').forEach(b=>b.classList.toggle('active',b===button));renderGallery();}));
-
-    const sections=[...document.querySelectorAll('main section[id]')];
-    const navLinks=[...document.querySelectorAll('.bottom-nav a, .desktop-nav a')];
-    const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){navLinks.forEach(link=>link.classList.toggle('active',link.getAttribute('href')==='#'+entry.target.id));}}},{rootMargin:'-35% 0px -55% 0px'});
-    sections.forEach(section=>observer.observe(section));
-    renderGallery();
+    const sections=[...document.querySelectorAll('main section[id]')],navLinks=[...document.querySelectorAll('.bottom-nav a,.desktop-nav a')];const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){navLinks.forEach(link=>link.classList.toggle('active',link.getAttribute('href')==='#'+entry.target.id));}}},{rootMargin:'-35% 0px -55% 0px'});sections.forEach(section=>observer.observe(section));
+    renderGallery();renderLatestWedding();
   </script>
 </body>
-  </html>
+                                                                                                                                                                                                                                                    </html>
