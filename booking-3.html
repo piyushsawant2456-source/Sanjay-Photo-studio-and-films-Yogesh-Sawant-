@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Book photography and film services with Sanjay Photo Studio & Films.">
+  <title>Book Our Order | Sanjay Photo Studio & Films</title>
+  <style>
+    :root{--ink:#171717;--muted:#707070;--line:#e8e8e8;--paper:#fff;--soft:#f6f6f6;--gold:#b9973e;--gold-soft:#f8f3e7;--danger:#b42318;--radius:18px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:#f7f7f7;color:var(--ink);font-family:Inter,Arial,Helvetica,sans-serif;line-height:1.5}
+    button,input,textarea{font:inherit}
+    button{cursor:pointer}
+    .page{width:min(920px,100%);margin:0 auto;padding:22px 16px 48px}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}
+    .brand{font-weight:850;letter-spacing:.02em;font-size:14px}.brand span{color:var(--gold)}
+    .back{color:var(--ink);text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:9px 14px;background:#fff;font-size:13px}
+    .hero{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px 24px;margin-bottom:18px}
+    .eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:.18em;font-size:11px;font-weight:800}
+    h1{margin:7px 0 5px;font-size:clamp(30px,6vw,46px);line-height:1.08;letter-spacing:-.04em}
+    .hero p{color:var(--muted);margin:10px 0 0;max-width:650px}
+    .section{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px;margin:16px 0}
+    .section-head{display:flex;align-items:flex-start;gap:12px;margin-bottom:18px}
+    .step{flex:0 0 30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--gold-soft);color:#80651f;font-size:13px;font-weight:800}
+    h2{margin:0;font-size:19px;letter-spacing:-.02em}.sub{color:var(--muted);font-size:13px;margin:3px 0 0}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+    .field{display:flex;flex-direction:column;gap:6px;min-width:0}.field.full{grid-column:1/-1}
+    label{font-size:13px;font-weight:700}
+    input,textarea{width:100%;border:1px solid #dedede;border-radius:11px;padding:12px 13px;background:#fff;color:var(--ink);outline:none;min-height:46px}
+    textarea{min-height:100px;resize:vertical}
+    input:focus,textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px #b9973e1c}
+    .event-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+    .event-btn,.choice-btn{border:1px solid var(--line);border-radius:12px;background:#fff;padding:13px;text-align:left;color:var(--ink);transition:.2s ease;min-height:52px}
+    .event-btn:hover,.choice-btn:hover{border-color:var(--gold);transform:translateY(-1px)}
+    .event-btn.active,.choice-btn.active{border-color:var(--gold);background:var(--gold-soft);box-shadow:inset 0 0 0 1px var(--gold)}
+    .event-btn strong{display:block;font-size:14px}.event-btn small{display:block;color:var(--muted);margin-top:3px;font-size:11px}
+    .wedding-choice-wrap{margin-top:13px;padding:14px;border:1px solid var(--line);border-radius:14px;background:#fcfcfc}
+    .wedding-choice-wrap h3{font-size:13px;margin:0 0 10px}
+    .sub-options{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+    .choice-btn{text-align:left;font-size:13px;font-weight:750;line-height:1.45}
+    .choice-btn small{display:block;color:var(--muted);font-weight:500;margin-top:5px}
+    .hidden{display:none!important}
+    .date-group{margin:0 0 17px}.date-group:last-child{margin-bottom:0}
+    .date-heading{font-size:13px;font-weight:800;margin-bottom:8px}
+    .date-list{display:grid;gap:9px}
+    .date-row{display:grid;grid-template-columns:1fr auto;gap:9px;align-items:end}
+    .remove-date{border:1px solid var(--line);color:var(--muted);background:#fff;border-radius:10px;min-height:46px;padding:0 13px}
+    .add-btn{margin-top:10px;border:1px dashed #c9b477;background:var(--gold-soft);color:#71591b;border-radius:10px;padding:10px 14px;font-size:13px;font-weight:800}
+    .service-list{display:grid;gap:9px}
+    .service{display:flex;gap:12px;align-items:center;justify-content:space-between;border:1px solid var(--line);border-radius:12px;padding:12px}
+    .service-main{display:flex;align-items:flex-start;gap:10px;min-width:0}
+    .service input[type=checkbox]{width:18px;height:18px;min-height:18px;margin:2px 0 0;accent-color:#9b7b2c;flex:0 0 auto}
+    .service-name{font-size:13px;font-weight:700}.service-note{display:block;font-size:11px;color:var(--muted);margin-top:2px}
+    .service-price{font-size:12px;font-weight:800;white-space:nowrap;text-align:right}.free{color:var(--ink)}
+    .summary{background:var(--soft);border-radius:14px;padding:16px}
+    .summary-row{display:flex;justify-content:space-between;gap:15px;padding:7px 0;font-size:13px}
+    .summary-row.total{border-top:1px solid #dedede;margin-top:7px;padding-top:13px;font-size:16px;font-weight:800;color:var(--ink)}
+    .summary-row strong{text-align:right}
+    .notice{border:1px solid #eadfbf;background:#fffcf3;color:#6c5723;border-radius:11px;padding:11px 12px;font-size:12px;margin-top:12px}
+    .qr-section{margin-top:20px}.qr-heading{font-size:13px;font-weight:800;letter-spacing:.08em;margin-bottom:10px}
+    .qr-placeholder{min-height:180px;border:1.5px dashed #cfcfcf;border-radius:14px;background:#fafafa;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:7px;padding:22px;text-align:center}
+    .qr-placeholder-icon{font-size:42px;line-height:1;color:#777}.qr-placeholder strong{font-size:13px}.qr-placeholder span{color:var(--muted);font-size:11px}
+    .actions{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:16px}
+    .primary,.secondary{border-radius:12px;padding:14px 16px;min-height:50px;font-weight:800;font-size:13px}
+    .primary{background:var(--ink);color:#fff;border:1px solid var(--ink)}.secondary{background:#fff;color:var(--ink);border:1px solid var(--ink)}
+    .primary:hover{background:#333}.secondary:hover{border-color:var(--gold)}
+    .message{font-size:13px;margin-top:12px;color:var(--muted);min-height:20px}.error{color:var(--danger)}
+    .preview{border:1px solid var(--line);border-radius:14px;padding:15px;margin-top:16px;background:#fff}
+    .preview h3{font-size:14px;margin:0 0 10px}.preview-content{font-size:12px;color:#444;white-space:pre-wrap;overflow-wrap:anywhere}
+    .footer{text-align:center;color:var(--muted);font-size:11px;padding:18px 0 0}
+    .modal-backdrop{position:fixed;inset:0;background:#0008;display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
+    .modal-backdrop.show{display:flex}.modal{width:min(620px,100%);max-height:88vh;overflow:auto;background:#fff;border-radius:18px;padding:20px;box-shadow:0 20px 70px #0003}
+    .modal-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+    .modal-head h2{font-size:18px}.close-modal{border:1px solid var(--line);background:#fff;border-radius:50%;width:36px;height:36px;font-size:20px}
+    .modal-actions{display:flex;gap:10px;margin-top:16px}.modal-actions button{flex:1}
+    @media(max-width:600px){.page{padding:14px 12px 34px}.hero{padding:24px 19px}.section{padding:18px 15px}.grid,.event-grid,.actions,.sub-options{grid-template-columns:1fr}.service{align-items:flex-start}.service-price{font-size:11px}.modal-actions{flex-direction:column}}
+  </style>
+</head>
+<body>
+<main class="page">
+  <div class="topbar">
+    <div class="brand">SANJAY PHOTO STUDIO <span>& FILMS</span></div>
+    <a class="back" href="index.html">← Back to Home</a>
+  </div>
+
+  <header class="hero">
+    <div class="eyebrow">Let's create memories</div>
+    <h1>BOOK OUR ORDER</h1>
+    <p>Share your event details, choose the services you need, and review your enquiry before sending it to the studio.</p>
+  </header>
+
+  <form id="bookingForm" novalidate>
+    <section class="section">
+      <div class="section-head"><div class="step">01</div><div><h2>Customer Details</h2><p class="sub">Please enter the contact details for this enquiry.</p></div></div>
+      <div class="grid">
+        <div class="field"><label for="fullName">Customer Full Name *</label><input id="fullName" autocomplete="name" required placeholder="Enter full name"></div>
+        <div class="field"><label for="contact">Contact Number *</label><input id="contact" type="tel" inputmode="tel" autocomplete="tel" required placeholder="Enter contact number"></div>
+        <div class="field"><label for="whatsapp">WhatsApp Number *</label><input id="whatsapp" type="tel" inputmode="tel" required placeholder="Enter WhatsApp number"></div>
+        <div class="field"><label for="address">Address *</label><input id="address" autocomplete="street-address" required placeholder="Enter address"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><div class="step">02</div><div><h2>Select Event Type</h2><p class="sub">Choose one event. Select the relevant wedding arrangement if you choose Wedding.</p></div></div>
+      <div class="event-grid" id="eventGrid">
+        <button class="event-btn" type="button" data-event="wedding"><strong>Wedding</strong><small>Wedding photography and film services</small></button>
+        <button class="event-btn" type="button" data-event="barase"><strong>बारसे (Barase)</strong></button>
+        <button class="event-btn" type="button" data-event="baby"><strong>Baby Shower</strong></button>
+        <button class="event-btn" type="button" data-event="dohale"><strong>डोहाळे जेवण</strong></button>
+        <button class="event-btn" type="button" data-event="birthday"><strong>Birthday</strong></button>
+        <button class="event-btn" type="button" data-event="shop"><strong>Shop Opening</strong></button>
+        <button class="event-btn" type="button" data-event="car"><strong>Car Delivery</strong></button>
+        <button class="event-btn" type="button" data-event="other"><strong>Other Events</strong></button>
+      </div>
+      <div id="weddingChoiceWrap" class="wedding-choice-wrap hidden">
+        <h3>Select Wedding Arrangement</h3>
+        <div class="sub-options">
+          <button type="button" class="choice-btn" data-wedding="wedding1">साखरपुडा + गावदेव + लग्न<small>( साखरपुडा हा लग्न मध्ये नसून अगोदर आहे )</small></button>
+          <button type="button" class="choice-btn" data-wedding="wedding2">गावदेव + लग्न<small>( साखरपुडा व बाकीचे सर्व हे लग्न मध्ये आहे )</small></button>
+        </div>
+      </div>
+      <div id="otherTimeWrap" class="wedding-choice-wrap hidden">
+        <h3>Select Event Timing</h3>
+        <div class="sub-options">
+          <button type="button" class="choice-btn" data-time="Day">Day</button>
+          <button type="button" class="choice-btn" data-time="Night">Night</button>
+          <button type="button" class="choice-btn" data-time="Day + Night">Day + Night</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hidden" id="detailsSection">
+      <div class="section-head"><div class="step">03</div><div><h2>Event Dates & Select Services</h2><p class="sub">Add one or more dates for each event, then select the services you require.</p></div></div>
+      <div class="field full" style="margin-bottom:18px">
+        <label>Event Dates *</label>
+        <p class="sub">Use ADD DATE to enter multiple dates for the same event.</p>
+        <div id="dateGroups"></div>
+      </div>
+      <div style="border-top:1px solid var(--line);padding-top:18px;margin-top:8px">
+        <h3 style="font-size:15px;margin:0 0 8px">Available Services</h3>
+        <p class="sub" style="margin:0 0 14px">Select all services you require. Traditional Photo Shoot is FREE by Studio.</p>
+        <div class="service-list" id="serviceList"></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><div class="step">04</div><div><h2>About Studio Enquiry</h2><p class="sub">Add any additional message or special requirements (optional).</p></div></div>
+      <div class="field"><textarea id="aboutEnquiry" placeholder="Write your additional requirements or message here."></textarea></div>
+    </section>
+
+    <section class="section">
+      <div class="section-head"><div class="step">05</div><div><h2>Booking Price Summary</h2><p class="sub">Service rates are configured by the studio Admin.</p></div></div>
+      <div class="summary" aria-live="polite">
+        <div class="summary-row total"><span>Total Amount</span><strong id="totalAmount">Select an event</strong></div>
+      </div>
+      <div class="notice">The total will be displayed after Admin has configured all selected service rates. Services with unconfirmed rates are not treated as free.</div>
+      <div class="preview" id="livePreview">
+        <h3>Live Booking Preview</h3>
+        <div class="preview-content" id="previewContent">Your selected event, dates and services will appear here as you complete the form.</div>
+      </div>
+      <div class="qr-section" aria-label="Payment QR code placeholder">
+        <div class="qr-heading">PAYMENT QR CODE</div>
+        <div class="qr-placeholder">
+          <div class="qr-placeholder-icon" aria-hidden="true">▦</div>
+          <strong>Your Google Pay QR code will be added here</strong>
+          <span>Studio QR image pending</span>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="primary" type="button" id="bookBtn">BOOK OUR ORDER</button>
+        <button class="secondary" type="button" id="whatsappBtn">SEND WHATSAPP ENQUIRY NOW</button>
+      </div>
+      <p class="message" id="formMessage" role="status" aria-live="polite"></p>
+    </section>
+  </form>
+  <div class="footer">Sanjay Photo Studio & Films · Capturing Moments. Creating Memories.</div>
+</main>
+
+<div class="modal-backdrop" id="previewModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <div class="modal-head"><h2 id="modalTitle">Review Your Booking Enquiry</h2><button class="close-modal" type="button" id="closeModal" aria-label="Close">×</button></div>
+    <p class="sub">Please check every detail. You can close this preview and edit the form if anything needs correction.</p>
+    <div class="preview"><div class="preview-content" id="modalPreview"></div></div>
+    <div class="notice">This is a review step, not a confirmed booking. Online booking storage will be connected during the secure backend setup.</div>
+    <div class="modal-actions">
+      <button class="secondary" type="button" id="editBtn">EDIT DETAILS</button>
+      <button class="primary" type="button" id="modalWhatsAppBtn">CONTINUE TO WHATSAPP</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  /*
+    ADMIN CONFIGURATION
+    Enter confirmed rates only after the studio Admin finalises them.
+    A null rate means "Price to be confirmed"; it is never treated as free.
+    Traditional Photo Shoot remains complimentary at ₹0.
+    This public page is not an Admin control panel. Secure rate management
+    and saved booking requests will be connected through Firebase later.
+  */
+  const ADMIN_CONFIG = {
+    whatsappNumber: "91XXXXXXXXXX",
+    events: {
+      wedding1:{rates:{traditionalPhoto:0,traditionalVideo:null,candidPhoto:null,drone:null,cinematic:null,preWedding:null,liveWall:null,crane:null,album:null}},
+      wedding2:{rates:{traditionalPhoto:0,traditionalVideo:null,candidPhoto:null,drone:null,cinematic:null,preWedding:null,liveWall:null,crane:null,album:null}},
+      barase:{rates:{traditionalPhoto:0,traditionalVideo:null,drone:null,cinematic:null,liveWall:null,album:null}},
+      baby:{rates:{traditionalPhoto:0,traditionalVideo:null,drone:null,cinematic:null,liveWall:null,album:null}},
+      dohale:{rates:{traditionalPhoto:0,traditionalVideo:null,drone:null,cinematic:null,liveWall:null,album:null}},
+      birthday:{rates:{traditionalPhoto:0,traditionalVideo:null,drone:null,cinematic:null,liveWall:null,album:null}},
+      shop:{rates:{traditionalPhoto:0,traditionalVideo:null,drone:null,cinematic:null,liveWall:null,album:null}},
+      car:{rates:{traditionalPhoto:0,traditionalVideo:null,drone:null,cinematic:null,album:null}},
+      other:{rates:{traditionalPhoto:0,traditionalVideo:null,candidPhoto:null,drone:null,cinematic:null,preWedding:null,liveWall:null,crane:null,album:null}}
+    }
+  };
+
+  const SERVICE_CATALOG = {
+    traditionalPhoto:{name:"Traditional Photo Shoot",note:"FREE by Studio"},
+    traditionalVideo:{name:"Traditional Video Shoot"},
+    candidPhoto:{name:"Candid Photo Shoot"},
+    drone:{name:"Drone Shoot (Photos + Videos)"},
+    cinematic:{name:"Cinematic Films",note:"Wedding package: 3 Reels + 1 Video"},
+    preWedding:{name:"Pre-Wedding"},
+    liveWall:{name:"Live Screen Wall 4K"},
+    crane:{name:"Live Video Shoot with Crane"},
+    album:{name:"Album Types",note:"Package details to be confirmed"}
+  };
+
+  const EVENT_INFO = {
+    wedding1:{title:"Wedding — साखरपुडा + गावदेव + लग्न",dates:["साखरपुडा","गावदेव","लग्न"],services:["traditionalPhoto","traditionalVideo","candidPhoto","drone","cinematic","preWedding","liveWall","crane","album"]},
+    wedding2:{title:"Wedding — गावदेव + लग्न",dates:["गावदेव","लग्न"],services:["traditionalPhoto","traditionalVideo","candidPhoto","drone","cinematic","preWedding","liveWall","crane","album"]},
+    barase:{title:"बारसे (Barase)",dates:["Barase"],services:["traditionalPhoto","traditionalVideo","drone","cinematic","liveWall","album"]},
+    baby:{title:"Baby Shower",dates:["Baby Shower"],services:["traditionalPhoto","traditionalVideo","drone","cinematic","liveWall","album"]},
+    dohale:{title:"डोहाळे जेवण",dates:["डोहाळे जेवण"],services:["traditionalPhoto","traditionalVideo","drone","cinematic","liveWall","album"]},
+    birthday:{title:"Birthday",dates:["Birthday"],services:["traditionalPhoto","traditionalVideo","drone","cinematic","liveWall","album"]},
+    shop:{title:"Shop Opening",dates:["Shop Opening"],services:["traditionalPhoto","traditionalVideo","drone","cinematic","liveWall","album"]},
+    car:{title:"Car Delivery",dates:["Car Delivery"],services:["traditionalPhoto","traditionalVideo","drone","cinematic","album"]},
+    other:{title:"Other Events",dates:["Event"],services:["traditionalPhoto","traditionalVideo","candidPhoto","drone","cinematic","preWedding","liveWall","crane","album"]}
+  };
+
+  const $ = id => document.getElementById(id);
+  const money = value => "₹" + Number(value).toLocaleString("en-IN");
+  let selectedEvent = "";
+  let otherTiming = "";
+  const selectedServices = new Set();
+
+  function setMessage(message,isError=false){
+    $("formMessage").textContent=message;
+    $("formMessage").className="message"+(isError?" error":"");
+  }
+
+  function chooseEvent(key){
+    selectedEvent=key;
+    otherTiming="";
+    selectedServices.clear();
+    document.querySelectorAll(".event-btn").forEach(button=>button.classList.toggle("active",button.dataset.event===key));
+    document.querySelectorAll("[data-time]").forEach(button=>button.classList.remove("active"));
+    $("weddingChoiceWrap").classList.toggle("hidden",key!=="wedding");
+    $("otherTimeWrap").classList.toggle("hidden",key!=="other");
+    $("detailsSection").classList.toggle("hidden",key==="wedding");
+    if(key==="wedding"){
+      $("detailsSection").classList.add("hidden");
+      document.querySelectorAll("[data-wedding]").forEach(button=>button.classList.remove("active"));
+    }else{
+      renderDetails(key);
+    }
+    updatePreview();
+    setMessage("");
+  }
+
+  function chooseWedding(key){
+    selectedEvent=key;
+    selectedServices.clear();
+    document.querySelectorAll("[data-wedding]").forEach(button=>button.classList.toggle("active",button.dataset.wedding===key));
+    $("detailsSection").classList.remove("hidden");
+    renderDetails(key);
+    updatePreview();
+    setMessage("");
+  }
+
+  function renderDetails(key){
+    renderDates(key);
+    renderServices(key);
+    updateTotal();
+  }
+
+  function renderDates(key){
+    const container=$("dateGroups");
+    container.replaceChildren();
+    EVENT_INFO[key].dates.forEach((label,index)=>{
+      const group=document.createElement("div");
+      group.className="date-group";
+      const heading=document.createElement("div");
+      heading.className="date-heading";
+      heading.textContent=label+" Date";
+      const list=document.createElement("div");
+      list.className="date-list";
+      list.id="date-list-"+index;
+      const add=document.createElement("button");
+      add.type="button";
+      add.className="add-btn";
+      add.textContent="+ ADD DATE";
+      add.addEventListener("click",()=>addDateRow(index,label,true));
+      group.append(heading,list,add);
+      container.append(group);
+      addDateRow(index,label,false);
+    });
+  }
+
+  function addDateRow(index,label,allowRemove){
+    const list=$("date-list-"+index);
+    const row=document.createElement("div");
+    row.className="date-row";
+    const field=document.createElement("div");
+    field.className="field";
+    const input=document.createElement("input");
+    input.type="date";
+    input.min=new Date().toISOString().slice(0,10);
+    input.setAttribute("aria-label",label+" date");
+    input.addEventListener("change",updatePreview);
+    field.append(input);
+    row.append(field);
+    if(allowRemove){
+      const remove=document.createElement("button");
+      remove.type="button";
+      remove.className="remove-date";
+      remove.textContent="Remove";
+      remove.addEventListener("click",()=>{row.remove();updatePreview();});
+      row.append(remove);
+    }
+    list.append(row);
+  }
+
+  function renderServices(key){
+    const list=$("serviceList");
+    list.replaceChildren();
+    const rates=ADMIN_CONFIG.events[key].rates;
+    EVENT_INFO[key].services.forEach(serviceKey=>{
+      const item=SERVICE_CATALOG[serviceKey];
+      const row=document.createElement("label");
+      row.className="service";
+      const main=document.createElement("span");
+      main.className="service-main";
+      const checkbox=document.createElement("input");
+      checkbox.type="checkbox";
+      checkbox.checked=selectedServices.has(serviceKey);
+      checkbox.addEventListener("change",()=>{
+        checkbox.checked?selectedServices.add(serviceKey):selectedServices.delete(serviceKey);
+        updateTotal();
+        updatePreview();
+      });
+      const textWrap=document.createElement("span");
+      const name=document.createElement("span");
+      name.className="service-name";
+      name.textContent=item.name;
+      textWrap.append(name);
+      if(item.note){
+        const note=document.createElement("small");
+        note.className="service-note";
+        note.textContent=item.note;
+        textWrap.append(note);
+      }
+      main.append(checkbox,textWrap);
+      const price=document.createElement("span");
+      price.className="service-price"+(serviceKey==="traditionalPhoto"?" free":"");
+      const rate=rates[serviceKey];
+      price.textContent=rate===0?"FREE · ₹0":rate==null?"Price to be confirmed":money(rate);
+      row.append(main,price);
+      list.append(row);
+    });
+  }
+
+  function updateTotal(){
+    if(!selectedEvent){$("totalAmount").textContent="Select an event";return;}
+    const rates=ADMIN_CONFIG.events[selectedEvent].rates;
+    let total=0,unconfirmed=false;
+    selectedServices.forEach(key=>{
+      if(rates[key]==null)unconfirmed=true;
+      else total+=rates[key];
+    });
+    $("totalAmount").textContent=unconfirmed?"Pending Admin confirmation":money(total);
+  }
+
+  function collectBooking(){
+    if(!selectedEvent)return null;
+    const info=EVENT_INFO[selectedEvent];
+    const dates=info.dates.map((label,index)=>({
+      label:label+" Date",
+      values:Array.from(document.querySelectorAll("#date-list-"+index+" input[type=date]")).map(input=>input.value).filter(Boolean)
+    }));
+    const rates=ADMIN_CONFIG.events[selectedEvent].rates;
+    return {
+      customer:{fullName:$("fullName").value.trim(),contact:$("contact").value.trim(),whatsapp:$("whatsapp").value.trim(),address:$("address").value.trim()},
+      event:info.title,
+      timing:otherTiming||null,
+      dates,
+      services:Array.from(selectedServices).map(key=>({key,name:SERVICE_CATALOG[key].name,rate:rates[key]})),
+      requirements:$("aboutEnquiry").value.trim()
+    };
+  }
+
+  function bookingText(data){
+    const lines=["BOOK OUR ORDER — ENQUIRY","","CUSTOMER DETAILS","Name: "+data.customer.fullName,"Contact: "+data.customer.contact,"WhatsApp: "+data.customer.whatsapp,"Address: "+data.customer.address,"","Event: "+data.event];
+    if(data.timing)lines.push("Timing: "+data.timing);
+    lines.push("","EVENT DATES");
+    data.dates.forEach(date=>lines.push(date.label+": "+(date.values.length?date.values.join(", "):"Not selected")));
+    lines.push("","SELECTED SERVICES");
+    data.services.forEach(service=>lines.push(service.name+" — "+(service.rate===0?"FREE (₹0)":service.rate==null?"Price to be confirmed by Admin":money(service.rate))));
+    lines.push("","Total Amount: "+$("totalAmount").textContent);
+    if(data.requirements)lines.push("","Additional Requirements:",data.requirements);
+    lines.push("","Please contact me to discuss and confirm this enquiry.");
+    return lines.join("\n");
+  }
+
+  function validateBooking(){
+    const name=$("fullName").value.trim();
+    const contact=$("contact").value.replace(/\D/g,"");
+    const whatsapp=$("whatsapp").value.replace(/\D/g,"");
+    if(!name||!$("address").value.trim())return "Please complete your name and address.";
+    if(contact.length<10||contact.length>13)return "Please enter a valid Contact Number (10 to 13 digits).";
+    if(whatsapp.length<10||whatsapp.length>13)return "Please enter a valid WhatsApp Number (10 to 13 digits).";
+    if(!selectedEvent)return "Please select an event type.";
+    if(selectedEvent==="wedding"||!EVENT_INFO[selectedEvent])return "Please select one of the two Wedding arrangements.";
+    if(selectedEvent==="other"&&!otherTiming)return "Please select Day, Night or Day + Night.";
+    const allDates=Array.from(document.querySelectorAll('#dateGroups input[type="date"]')).filter(input=>input.value);
+    if(!allDates.length)return "Please add at least one event date.";
+    if(!selectedServices.size)return "Please select at least one service.";
+    return "";
+  }
+
+  function updatePreview(){
+    updateTotal();
+    const data=collectBooking();
+    if(!data){$("previewContent").textContent="Your selected event, dates and services will appear here as you complete the form.";return;}
+    const lines=[
+      "Customer: "+(data.customer.fullName||"Not entered"),
+      "Contact: "+(data.customer.contact||"Not entered"),
+      "WhatsApp: "+(data.customer.whatsapp||"Not entered"),
+      "Address: "+(data.customer.address||"Not entered"),
+      "",
+      "Event: "+data.event+(data.timing?" ("+data.timing+")":""),
+      "",
+      "Event Dates:"
+    ];
+    data.dates.forEach(date=>lines.push("• "+date.label+": "+(date.values.length?date.values.join(", "):"Not selected")));
+    lines.push("","Selected Services:");
+    if(data.services.length)data.services.forEach(service=>lines.push("• "+service.name));
+    else lines.push("• No services selected yet");
+    lines.push("","Total Amount: "+$("totalAmount").textContent);
+    if(data.requirements)lines.push("","Additional Requirements: "+data.requirements);
+    $("previewContent").textContent=lines.join("\n");
+  }
+
+  function openWhatsApp(){
+    const error=validateBooking();
+    if(error){setMessage(error,true);return;}
+    const number=ADMIN_CONFIG.whatsappNumber.replace(/\D/g,"");
+    if(number==="91"||number==="91XXXXXXXXXX"||number.length<10){
+      setMessage("Studio WhatsApp number has not been configured yet. Add the verified number in ADMIN_CONFIG before publishing.",true);
+      return;
+    }
+    const url="https://wa.me/"+number+"?text="+encodeURIComponent(bookingText(collectBooking()));
+    window.open(url,"_blank","noopener,noreferrer");
+    setMessage("WhatsApp opened with your enquiry. Review the message and tap Send in WhatsApp.");
+  }
+
+  document.querySelectorAll("[data-event]").forEach(button=>button.addEventListener("click",()=>chooseEvent(button.dataset.event)));
+  document.querySelectorAll("[data-wedding]").forEach(button=>button.addEventListener("click",()=>chooseWedding(button.dataset.wedding)));
+  document.querySelectorAll("[data-time]").forEach(button=>button.addEventListener("click",()=>{
+    otherTiming=button.dataset.time;
+    document.querySelectorAll("[data-time]").forEach(item=>item.classList.toggle("active",item===button));
+    updatePreview();
+  }));
+  ["fullName","contact","whatsapp","address","aboutEnquiry"].forEach(id=>$(id).addEventListener("input",updatePreview));
+
+  $("bookBtn").addEventListener("click",()=>{
+    const error=validateBooking();
+    if(error){setMessage(error,true);return;}
+    $("modalPreview").textContent=$("previewContent").textContent;
+    $("previewModal").classList.add("show");
+    $("closeModal").focus();
+  });
+  $("closeModal").addEventListener("click",()=>$("previewModal").classList.remove("show"));
+  $("editBtn").addEventListener("click",()=>$("previewModal").classList.remove("show"));
+  $("modalWhatsAppBtn").addEventListener("click",openWhatsApp);
+  $("whatsappBtn").addEventListener("click",openWhatsApp);
+  $("previewModal").addEventListener("click",event=>{if(event.target===$("previewModal"))$("previewModal").classList.remove("show");});
+  document.addEventListener("keydown",event=>{if(event.key==="Escape")$("previewModal").classList.remove("show");});
+  $("bookingForm").addEventListener("submit",event=>event.preventDefault());
+  updatePreview();
+</script>
+</body>
+</html>
