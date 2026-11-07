@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Private environment files
+.env
+.env.*
+!.env.example
+
+# Firebase local files
+.firebase/
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+
+# Build files
+dist/
